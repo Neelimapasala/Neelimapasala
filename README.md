@@ -4,90 +4,168 @@
 
 🎓 M.Sc. Data Science Graduate from Vellore Institute of Technology (VIT)
 
-I am passionate about building AI-powered applications that solve real-world problems using Machine Learning, Natural Language Processing, Computer Vision, and Generative AI. I enjoy transforming data into intelligent solutions and continuously exploring emerging AI technologies.
+I am passionate about building intelligent systems using Artificial Intelligence, Machine Learning, Natural Language Processing, Computer Vision, and Generative AI. I enjoy solving real-world problems through data-driven solutions and continuously exploring emerging AI technologies.
 
 ---
 
 ## 🚀 About Me
 
-* 🔭 Building AI, ML, and NLP-based applications
-* 🌱 Learning LLMs, RAG, AI Agents, and Production AI Systems
-* 💡 Interested in Generative AI, Data Science, Computer Vision, and Intelligent Automation
-* 🎯 Seeking opportunities as an AI/ML Engineer, Data Scientist, or GenAI Engineer
-* 📈 Strong foundation in Machine Learning, Data Analytics, and Software Development
+* 🤖 AI & Machine Learning Enthusiast
+* 📊 Data Science and Analytics Practitioner
+* 🧠 Passionate about NLP, LLMs, and Generative AI
+* 🔍 Strong interest in AI Agents, RAG Systems, and Intelligent Automation
+* 💡 Building scalable AI solutions for real-world applications
+* 🎯 Seeking opportunities in AI Engineering, Machine Learning, Data Science, and Generative AI
 
 ---
 
-## 🛠️ Technical Skills
+## 💻 Technical Skills
 
-### Programming
+### Programming Languages
 
 * Python
 * SQL
 * R
+* Java (Basics)
 
-### Machine Learning & AI
+### Data Science & Analytics
 
-* Scikit-learn
-* TensorFlow
-* Deep Learning
-* Natural Language Processing (NLP)
-* Computer Vision
-* Predictive Analytics
-
-### Data Analytics
-
-* Pandas
-* NumPy
-* Matplotlib
-* Power BI
+* Data Cleaning & Preprocessing
 * Exploratory Data Analysis (EDA)
+* Statistical Analysis
+* Data Visualization
+* Feature Engineering
+* Predictive Analytics
+* Business Intelligence
 
-### Tools & Platforms
+### Machine Learning
 
-* Git & GitHub
-* VS Code
-* Jupyter Notebook
-* Google Colab
-* REST APIs
+* Supervised Learning
+* Unsupervised Learning
+* Classification
+* Regression
+* Clustering
+* Ensemble Learning
+* Model Evaluation & Optimization
+* Hyperparameter Tuning
 
----
+### Deep Learning
 
-## 📌 Featured Projects
+* Artificial Neural Networks (ANN)
+* Convolutional Neural Networks (CNN)
+* Deep Learning Fundamentals
 
-### 🚗 QuickPark: Efficient Slot Booking and Traffic Insights
+### Natural Language Processing (NLP)
 
-AI-powered smart parking management system using image processing and traffic analytics.
+* Text Classification
+* Sentiment Analysis
+* Text Preprocessing
+* Named Entity Recognition
+* Topic Modeling
+* Feature Extraction
+* Prompt Engineering
 
-### 🧠 Mental Health Detection from Text
+### Generative AI
 
-NLP-based machine learning system for identifying mental health indicators from textual data.
-
-### 📊 Sentiment Analysis on Twitter Data
-
-Machine learning model for analyzing public sentiment from social media content.
-
-### 🌱 AI-Based Soil Analysis System
-
-Agricultural recommendation system using machine learning and soil parameter analysis.
-
-### 🤖 AI Roadmap Platform
-
-Interactive web platform that helps learners navigate AI, Machine Learning, Data Science, and Generative AI learning paths.
-
----
-
-## 🌟 Areas of Interest
-
-* Artificial Intelligence
-* Machine Learning
-* Deep Learning
-* Generative AI
 * Large Language Models (LLMs)
 * Retrieval-Augmented Generation (RAG)
 * AI Agents
-* Computer Vision
-* Data Analytics
+* Prompt Engineering
+* Vector Databases
+* LLM Application Development
+
+### Computer Vision
+
+* Image Classification
+* Object Detection
+* OpenCV
+* Image Processing
+
+### Libraries & Frameworks
+
+* Pandas
+* NumPy
+* Scikit-learn
+* TensorFlow
+* OpenCV
+* Matplotlib
+* Seaborn
+
+### Databases
+
+* MySQL
+* MongoDB
+
+### Data Visualization & BI
+
+* Power BI
+* Matplotlib
+* Tableau (Basic)
+
+### Development Tools
+
+* Git
+* GitHub
+* VS Code
+* Jupyter Notebook
+* Google Colab
+
+### Web & API Development
+
+* REST APIs
+* Flask
+* FastAPI (Learning)
+
+### Cloud & Deployment
+
+* Render
+* GitHub Pages
+* Model Deployment Basics
+
+---
+
+## 🚀 Featured Projects
+
+### 🚗 QuickPark: Efficient Slot Booking and Traffic Insights
+
+AI-powered smart parking management system using image processing, computer vision, and traffic analytics.
+
+### 🧠 Mental Health Detection from Text
+
+Machine Learning and NLP-based system for identifying mental health indicators from textual data.
+
+### 📊 Sentiment Analysis on Twitter Data
+
+Developed a sentiment classification model to analyze public opinions and social media trends.
+
+### 🌱 AI-Based Soil Analysis System
+
+Machine learning-powered agricultural recommendation system based on soil characteristics.
+
+### 🛣️ AI Roadmap Platform
+
+Interactive web platform designed to guide learners through AI, Machine Learning, Data Science, and Generative AI learning paths.
+
+---
+
+## 🌱 Currently Learning
+
+* Advanced Generative AI
+* Multi-Agent AI Systems
+* Production AI Systems
+* MLOps
+* LLM Evaluation
+* AI Safety & Responsible AI
+* Vector Databases
+* Advanced RAG Architectures
+
+---
+
+## 🏆 Certifications
+
+* Artificial Intelligence
+* Machine Learning
+* Python Programming
 
 ---
 
@@ -106,4 +184,4 @@ https://github.com/Neelimapasala
 
 ---
 
-⭐ "Building intelligent systems that turn data into impactful solutions."
+⭐ "Transforming data into intelligence and ideas into impactful AI solutions."
