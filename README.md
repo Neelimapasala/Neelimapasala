@@ -177,7 +177,7 @@ Interactive web platform designed to guide learners through AI, Machine Learning
 [www.linkedin.com/in/neelima-pasala-1a90052a9](http://www.linkedin.com/in/neelima-pasala-1a90052a9)
 
 🌐 Portfolio:
-https://portifolo-neelima-1.onrender.com/
+https://neelimapasala-portifolo.onrender.com/
 
 💻 GitHub:
 https://github.com/Neelimapasala
