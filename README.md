@@ -1,12 +1,7 @@
-<!-- ===================== HEADER ===================== -->
+<!-- ===================== HERO ===================== -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:7f00ff,100:00d4ff&height=220&section=header&text=Pasala%20Neelima&fontSize=60&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=AI%2FML%20Engineer%20%E2%80%A2%20Data%20Scientist%20%E2%80%A2%20GenAI%20Builder&descAlignY=58&descSize=18" width="100%" alt="header"/>
-</p>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Waving%20Hand.png" width="40" alt="wave"/>
   <a href="https://github.com/Neelimapasala">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=800&color=A78BFA&center=true&vCenter=true&width=640&lines=Hi+there!+I'm+Neelima;AI%2FML+Engineer+%7C+Generative+AI+Enthusiast;Building+AI+Agents+%26+RAG+Systems;NLP+%E2%80%A2+Computer+Vision+%E2%80%A2+LLMs;Turning+data+into+intelligence+%E2%9C%A8" alt="Typing SVG" />
+    <img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/hero.svg" width="100%" alt="Pasala Neelima, AI/ML Engineer, Generative AI Builder, LLM, RAG, AI Agents, Computer Vision and NLP"/>
   </a>
 </p>
 
