@@ -43,15 +43,15 @@ def about():
     W, H, CYCLE = 860, 400, 16.0
     lines = [
         ("$ ", "whoami", CYAN),
-        ("> ", "Pasala Neelima — AI/ML Engineer & Data Scientist", TEXT),
-        ("$ ", "cat education.txt", CYAN),
-        ("> ", "🎓 M.Sc. Data Science · Vellore Institute of Technology", TEXT),
-        ("$ ", "ls ./focus", CYAN),
-        ("> ", "GenAI  AI-Agents  RAG  NLP  Computer-Vision", VIOLET),
-        ("$ ", "cat now_learning.md", CYAN),
-        ("> ", "Multi-Agent Systems · MLOps · LLM Eval · Advanced RAG", TEXT),
-        ("$ ", "echo $GOAL", CYAN),
-        ("> ", "Turning data into intelligence 🚀  (open to AI/ML roles)", GREEN),
+        ("> ", "Neelima Pasala — Aspiring Applied AI Engineer", TEXT),
+        ("$ ", "cat current_role.txt", CYAN),
+        ("> ", "AI Automation & UI/UX Developer Intern @ Knowvo", TEXT),
+        ("$ ", "cat stack.txt", CYAN),
+        ("> ", "Python · LangChain · FastAPI · RAG · ChromaDB · React", VIOLET),
+        ("$ ", "ls ./interests", CYAN),
+        ("> ", "GenAI  Agentic-AI  LLM-Apps  AI-Automation", TEXT),
+        ("$ ", "echo $MOTTO", CYAN),
+        ("> ", "Always curious. Turning ideas into impact 🚀", GREEN),
     ]
     cw = 8.4  # approx char width at 14px mono
     out, defs = [], []
@@ -455,7 +455,7 @@ def hero():
                      f'<animate attributeName="opacity" values="0;.9;0" dur="{d:.1f}s" begin="{-rnd.uniform(0, d):.1f}s" repeatCount="indefinite"/></circle>')
 
     # roles typing carousel
-    roles = ["AI/ML Engineer", "Generative AI Builder", "LLM · RAG · AI Agents", "Computer Vision & NLP"]
+    roles = ["Applied AI Engineer", "Generative & Agentic AI", "LLM · RAG · AI Agents", "AI Automation · UI/UX"]
     SLOT, CYC = 3.4, 3.4 * len(roles)
     RX, RY, CW = NX + 30, 214, 14.5
     role_defs, role_txt = [], []
@@ -478,7 +478,7 @@ def hero():
             f'<animate attributeName="opacity" values="{on}" keyTimes="{okt}" dur="{CYC}s" repeatCount="indefinite"/></rect>')
 
     # chips
-    chips_data = [("🎓", "M.Sc. Data Science · VIT", VIOLET), ("📍", "Chennai, India", CYAN), (None, "Open to AI/ML roles", GREEN)]
+    chips_data = [("🎓", "M.Sc. Data Science · VIT Chennai", VIOLET), ("📍", "Chennai, India", CYAN), (None, "Open to AI/ML roles", GREEN)]
     cx, chips = NX, []
     for i, (e, t, c) in enumerate(chips_data):
         w = len(t) * 7.3 + (44 if e or True else 26)
@@ -582,8 +582,325 @@ def hero():
     write("hero.svg", svg)
 
 
+# ------------------------------------------------------------------ CINEMATIC ANDROID "NOVA"
+ANDROID_DEFS = f'''
+    <radialGradient id="faceG" cx=".45" cy=".4" r=".7"><stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#ece8ff"/><stop offset="1" stop-color="#b7aee0"/></radialGradient>
+    <linearGradient id="hairG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b48cff"/><stop offset=".45" stop-color="#6d28d9"/><stop offset="1" stop-color="#1e0b4a"/></linearGradient>
+    <linearGradient id="chromeG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8f86c4"/><stop offset=".5" stop-color="#f4f2ff"/><stop offset="1" stop-color="#7c72b5"/></linearGradient>
+    <linearGradient id="bodyG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3b2f73"/><stop offset=".5" stop-color="#1c1440"/><stop offset="1" stop-color="#0a0720"/></linearGradient>
+    <linearGradient id="plateG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#a99fdc"/></linearGradient>
+    <linearGradient id="lipG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e05cf0"/><stop offset="1" stop-color="#9b1fb8"/></linearGradient>
+    <linearGradient id="scanG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{CYAN}" stop-opacity="0"/><stop offset=".5" stop-color="{CYAN}" stop-opacity=".55"/><stop offset="1" stop-color="{CYAN}" stop-opacity="0"/></linearGradient>
+    <filter id="aglow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="3.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="14"/></filter>
+    <clipPath id="faceClip"><path d="M0,-72 C48,-72 62,-35 60,0 C58,38 30,66 0,70 C-30,66 -58,38 -60,0 C-62,-35 -48,-72 0,-72 Z"/></clipPath>'''
+
+
+def android_figure(wave=False):
+    """Original female android bust, drawn around head-centre (0,0). ~260 wide, from y=-110 to y=230."""
+    eye = lambda x, flick: f'''
+      <ellipse cx="{x}" cy="2" rx="15" ry="8.5" fill="#140f2e"/>
+      <circle cx="{x}" cy="2" r="6.5" fill="{CYAN}" filter="url(#aglow)"><animate attributeName="r" values="6.5;5.2;6.5" dur="3s" repeatCount="indefinite"/></circle>
+      <circle cx="{x}" cy="2" r="2.6" fill="#ffffff"/>
+      <circle cx="{x+3}" cy="-1" r="1.4" fill="#ffffff" opacity=".9"/>
+      <path d="M{x-16},-1 Q{x},-13 {x+16},-2 L{x+16+flick},-7" fill="none" stroke="#24184f" stroke-width="2.8" stroke-linecap="round"/>
+      <ellipse cx="{x}" cy="2" rx="16.5" ry="0" fill="#e4dffa"><animate attributeName="ry" values="0;0;10;0;0;0;10;0;0" keyTimes="0;.40;.42;.44;.80;.86;.875;.89;1" dur="6s" repeatCount="indefinite"/></ellipse>'''
+    arm = ''
+    if wave:
+        arm = f'''
+    <g><animateTransform attributeName="transform" type="rotate" values="-8 92 140;14 92 140;-8 92 140" dur="1.1s" repeatCount="indefinite"/>
+      <line x1="92" y1="140" x2="128" y2="44" stroke="url(#chromeG)" stroke-width="20" stroke-linecap="round"/>
+      <line x1="94" y1="132" x2="126" y2="50" stroke="{CYAN}" stroke-width="1.5" opacity=".7"/>
+      <g transform="translate(130 30)">
+        <rect x="-14" y="-6" width="28" height="30" rx="9" fill="url(#plateG)"/>
+        <rect x="-13" y="-28" width="6" height="24" rx="3" fill="url(#plateG)"/><rect x="-5" y="-33" width="6" height="28" rx="3" fill="url(#plateG)"/>
+        <rect x="3" y="-30" width="6" height="26" rx="3" fill="url(#plateG)"/><rect x="11" y="-22" width="5.5" height="20" rx="2.7" fill="url(#plateG)"/>
+        <rect x="-24" y="2" width="14" height="6" rx="3" fill="url(#plateG)" transform="rotate(-30 -17 5)"/>
+        <circle cx="0" cy="10" r="4" fill="{CYAN}" filter="url(#aglow)"><animate attributeName="opacity" values="1;.3;1" dur="1.1s" repeatCount="indefinite"/></circle>
+      </g>
+    </g>'''
+    return f'''
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0 0;0 -6;0 0" dur="4.5s" repeatCount="indefinite" additive="sum"/>
+    <!-- halo rings -->
+    <circle cx="0" cy="-5" r="128" fill="none" stroke="{CYAN}" stroke-opacity=".45" stroke-width="1.5" stroke-dasharray="3 9">
+      <animateTransform attributeName="transform" type="rotate" from="0 0 -5" to="360 0 -5" dur="30s" repeatCount="indefinite"/></circle>
+    <circle cx="0" cy="-5" r="112" fill="none" stroke="{VIOLET}" stroke-opacity=".5" stroke-width="2" stroke-dasharray="60 120 20 80" stroke-linecap="round">
+      <animateTransform attributeName="transform" type="rotate" from="360 0 -5" to="0 0 -5" dur="12s" repeatCount="indefinite"/></circle>
+    <!-- hair back -->
+    <path d="M-80,-18 C-90,-118 90,-118 80,-18 L84,58 C64,74 42,70 32,56 L-32,56 C-42,70 -64,74 -84,58 Z" fill="url(#hairG)"/>
+    <!-- body -->
+    <path d="M-135,232 L-128,178 C-118,136 -72,116 -26,107 L26,107 C72,116 118,136 128,178 L135,232 Z" fill="url(#bodyG)"/>
+    <path d="M-26,107 C-60,114 -95,128 -112,152 L-60,150 C-48,132 -36,120 -18,114 Z" fill="url(#plateG)" opacity=".9"/>
+    <path d="M26,107 C60,114 95,128 112,152 L60,150 C48,132 36,120 18,114 Z" fill="url(#plateG)" opacity=".9"/>
+    <path d="M-60,150 L-112,152 M60,150 L112,152 M-18,114 L0,150 L18,114" fill="none" stroke="{CYAN}" stroke-width="1.8" stroke-dasharray="8 30" filter="url(#aglow)">
+      <animate attributeName="stroke-dashoffset" from="76" to="0" dur="2s" repeatCount="indefinite"/></path>
+    <path d="M-100,200 C-70,185 -40,182 -20,186 M100,200 C70,185 40,182 20,186" fill="none" stroke="{VIOLET}" stroke-opacity=".6" stroke-width="1.5"/>
+    <!-- chest core -->
+    <circle cx="0" cy="178" r="22" fill="none" stroke="{CYAN}" stroke-opacity=".5" stroke-dasharray="4 4">
+      <animateTransform attributeName="transform" type="rotate" from="0 0 178" to="360 0 178" dur="8s" repeatCount="indefinite"/></circle>
+    <circle cx="0" cy="178" r="12" fill="{CYAN}" filter="url(#aglow)"><animate attributeName="r" values="10;14;10" dur="1.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values=".7;1;.7" dur="1.6s" repeatCount="indefinite"/></circle>
+    <circle cx="0" cy="178" r="5" fill="#ffffff"/>
+    {arm}
+    <!-- neck -->
+    <rect x="-19" y="56" width="38" height="56" rx="8" fill="url(#chromeG)"/>
+    <path d="M-19,70 H19 M-19,82 H19 M-19,94 H19" stroke="#7a70b0" stroke-width="1.3"/>
+    <line x1="0" y1="60" x2="0" y2="110" stroke="{CYAN}" stroke-width="2" filter="url(#aglow)"><animate attributeName="opacity" values=".4;1;.4" dur="2s" repeatCount="indefinite"/></line>
+    <!-- head (gentle tilt) -->
+    <g><animateTransform attributeName="transform" type="rotate" values="-2 0 40;2.5 0 40;-2 0 40" dur="7s" repeatCount="indefinite"/>
+      <circle cx="-63" cy="6" r="14" fill="url(#chromeG)"/><circle cx="63" cy="6" r="14" fill="url(#chromeG)"/>
+      <circle cx="-63" cy="6" r="8" fill="none" stroke="{CYAN}" stroke-width="2.5" filter="url(#aglow)"><animate attributeName="stroke-opacity" values="1;.25;1" dur="1.4s" repeatCount="indefinite"/></circle>
+      <circle cx="63" cy="6" r="8" fill="none" stroke="{CYAN}" stroke-width="2.5" filter="url(#aglow)"><animate attributeName="stroke-opacity" values=".25;1;.25" dur="1.4s" repeatCount="indefinite"/></circle>
+      <line x1="70" y1="-4" x2="84" y2="-46" stroke="url(#chromeG)" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="84" cy="-48" r="4" fill="{PINK if False else '#ff2bd6'}" filter="url(#aglow)"><animate attributeName="opacity" values="1;.15;1" dur=".9s" repeatCount="indefinite"/></circle>
+      <path d="M0,-72 C48,-72 62,-35 60,0 C58,38 30,66 0,70 C-30,66 -58,38 -60,0 C-62,-35 -48,-72 0,-72 Z" fill="url(#faceG)"/>
+      <path d="M-58,12 C-50,40 -28,60 0,64 C28,60 50,40 58,12" fill="none" stroke="#9d93cf" stroke-opacity=".55" stroke-width="1.2"/>
+      <ellipse cx="-36" cy="26" rx="10" ry="5" fill="#ff7ad9" opacity=".28"/><ellipse cx="36" cy="26" rx="10" ry="5" fill="#ff7ad9" opacity=".28"/>
+      <path d="M-38,-17 Q-24,-25 -10,-18 M10,-18 Q24,-25 38,-17" fill="none" stroke="#4c1d95" stroke-width="2.4" stroke-linecap="round"/>
+      {eye(-24, -4)}{eye(24, 4)}
+      <path d="M-2,16 Q1,24 4,21" fill="none" stroke="#9d93cf" stroke-width="1.6" stroke-linecap="round"/>
+      <path d="M-13,38 Q-6,34 0,37 Q6,34 13,38 Q0,49 -13,38 Z" fill="url(#lipG)"/>
+      <path d="M-11,38.5 Q0,41 11,38.5" fill="none" stroke="#7a1494" stroke-width="1"/>
+      <path d="M42,-36 L50,-28 L50,-14 M50,-28 L56,-28" fill="none" stroke="{CYAN}" stroke-width="1.6" stroke-dasharray="4 40" filter="url(#aglow)">
+        <animate attributeName="stroke-dashoffset" from="44" to="0" dur="1.8s" repeatCount="indefinite"/></path>
+      <circle cx="50" cy="-14" r="1.8" fill="{CYAN}"/>
+      <path d="M0,-58 L4,-52 L0,-46 L-4,-52 Z" fill="{CYAN}" filter="url(#aglow)"><animate attributeName="opacity" values=".5;1;.5" dur="2.2s" repeatCount="indefinite"/></path>
+      <g clip-path="url(#faceClip)"><rect x="-70" y="-90" width="140" height="22" fill="url(#scanG)">
+        <animate attributeName="y" values="-95;75;-95" dur="5s" repeatCount="indefinite"/></rect></g>
+      <!-- hair front: side-swept bangs -->
+      <path d="M-68,-6 C-74,-84 -22,-104 10,-98 C54,-94 80,-60 70,-2 C62,-40 42,-62 16,-64 C2,-46 -28,-36 -50,-40 C-58,-30 -64,-18 -68,-6 Z" fill="url(#hairG)"/>
+      <path d="M-40,-80 C-10,-96 30,-92 52,-70" fill="none" stroke="#ffffff" stroke-opacity=".55" stroke-width="3" stroke-linecap="round" stroke-dasharray="30 200">
+        <animate attributeName="stroke-dashoffset" values="230;0" dur="3.5s" repeatCount="indefinite"/></path>
+      <path d="M-56,-30 C-50,-60 -30,-80 0,-86 M20,-80 C42,-74 58,-56 64,-30" fill="none" stroke="#c4b5fd" stroke-opacity=".35" stroke-width="1.2"/>
+    </g>
+  </g>'''
+
+
+def cinematic_frame(W, H, title):
+    """Letterbox bars, vignette, anamorphic flare, light rays and dust shared by cinematic scenes."""
+    import random
+    rnd = random.Random(11)
+    dust = "".join(
+        f'<circle cx="{x}" cy="{y}" r="{r}" fill="#fff"><animate attributeName="cy" values="{y};{y+40}" dur="{d:.1f}s" begin="{-rnd.uniform(0,d):.1f}s" repeatCount="indefinite"/>'
+        f'<animate attributeName="cx" values="{x};{x+15};{x}" dur="{d:.1f}s" repeatCount="indefinite"/>'
+        f'<animate attributeName="opacity" values="0;.8;0" dur="{d:.1f}s" begin="{-rnd.uniform(0,d):.1f}s" repeatCount="indefinite"/></circle>'
+        for x, y, r, d in [(rnd.randint(30, int(W*0.55)), rnd.randint(40, H-60), rnd.choice([.7, 1, 1.4]), rnd.uniform(6, 12)) for _ in range(34)])
+    rays = "".join(
+        f'<path d="M{x},-20 L{x+w},-20 L{x+w+260},{H} L{x+120},{H} Z" fill="url(#rayG)" opacity="{o}">'
+        f'<animateTransform attributeName="transform" type="rotate" values="0 {x} 0;{s} {x} 0;0 {x} 0" dur="{d}s" repeatCount="indefinite"/></path>'
+        for x, w, o, s, d in [(60, 70, .55, 3, 9), (170, 40, .4, -2, 11), (280, 90, .35, 2.5, 13)])
+    bars = f'''
+    <rect x="0" y="0" width="{W}" height="28" fill="#000"/><rect x="0" y="{H-28}" width="{W}" height="28" fill="#000"/>
+    <text x="20" y="19" font-family="{MONO}" font-size="10.5" letter-spacing="3" fill="#8b949e">{escape(title)}</text>
+    <circle cx="{W-110}" cy="14" r="4" fill="#ef4444"><animate attributeName="opacity" values="1;.2;1" dur="1.2s" repeatCount="indefinite"/></circle>
+    <text x="{W-100}" y="19" font-family="{MONO}" font-size="10.5" letter-spacing="3" fill="#8b949e">LIVE · 4K</text>
+    <text x="20" y="{H-10}" font-family="{MONO}" font-size="10" letter-spacing="3" fill="#6e7681">ANAMORPHIC · 2.39:1</text>
+    <text x="{W-20}" y="{H-10}" text-anchor="end" font-family="{MONO}" font-size="10" letter-spacing="3" fill="#6e7681">NEELIMA PASALA PRODUCTIONS</text>'''
+    defs = f'''
+    <linearGradient id="rayG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d8ccff" stop-opacity=".22"/><stop offset="1" stop-color="#d8ccff" stop-opacity="0"/></linearGradient>
+    <radialGradient id="vig" cx=".5" cy=".5" r=".75"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".75"/></radialGradient>
+    <linearGradient id="flareG" x1="0" x2="1"><stop offset="0" stop-color="{CYAN}" stop-opacity="0"/><stop offset=".5" stop-color="#bff6ff" stop-opacity=".9"/><stop offset="1" stop-color="{CYAN}" stop-opacity="0"/></linearGradient>'''
+    return defs, rays, dust, bars
+
+
+def assistant_scene():
+    W, H = 1000, 460
+    defs, rays, dust, bars = cinematic_frame(W, H, "SCENE 01 — MEET NOVA")
+    AX, AY, S = 245, 200, 1.12
+    msgs = [
+        ("Hi! I'm NOVA 👋 Neelima's AI sidekick.", "Let me introduce my creator…"),
+        ("Neelima Pasala is an aspiring Applied AI Engineer,", "passionate about GenAI, Agentic AI & automation."),
+        ("Now: AI Automation & UI/UX Developer Intern @ Knowvo.", "Before: AI/ML Engineer Intern @ ZeAI Soft (RAG chatbot)."),
+        ("M.Sc. Data Science · VIT Chennai  |  B.Sc. Statistics", "Exec PG, Agentic & Generative AI · IIT Kharagpur"),
+        ("Always curious, always learning:", "turning ideas into impactful AI solutions 🚀"),
+    ]
+    SLOT = 6.0
+    CYC = SLOT * len(msgs)
+    PX, PY, PW, PH = 482, 92, 486, 262
+    tx = PX + 26
+    clips, texts = [], []
+    for i, (l1, l2) in enumerate(msgs):
+        s = i * SLOT
+        for j, line in enumerate((l1, l2)):
+            a, b = s + 0.3 + j * 1.4, s + 1.5 + j * 1.4
+            w = len(line) * 8.6 + 20
+            pts = [(0, 0), (a, 0), (b, w), (s + SLOT - 0.4, w), (s + SLOT - 0.3, 0), (CYC, 0)]
+            if a == 0:
+                pts = pts[1:]
+            kt = ";".join(f"{t/CYC:.4f}" for t, _ in pts)
+            vals = ";".join(f"{v:.0f}" for _, v in pts)
+            y = PY + 118 + j * 34
+            clips.append(f'<clipPath id="m{i}{j}"><rect x="{tx}" y="{y-22}" height="32" width="0"><animate attributeName="width" values="{vals}" keyTimes="{kt}" dur="{CYC}s" repeatCount="indefinite"/></rect></clipPath>')
+            texts.append(f'<text x="{tx}" y="{y}" clip-path="url(#m{i}{j})" font-family="{SANS}" font-size="16.5" font-weight="{700 if j == 0 else 500}" fill="{TEXT if j == 0 else "#c9c2f0"}">{escape(line)}</text>')
+    dots = "".join(
+        f'<circle cx="{PX+26+k*22}" cy="{PY+PH-30}" r="5" fill="{CYAN}" opacity=".25"><animate attributeName="opacity" values=".25;.25;1;1;.25;.25" '
+        f'keyTimes="0;{k*SLOT/CYC:.4f};{(k*SLOT+.05)/CYC:.4f};{((k+1)*SLOT-.05)/CYC:.4f};{(k+1)*SLOT/CYC:.4f};1" dur="{CYC}s" repeatCount="indefinite"/></circle>'
+        for k in range(len(msgs)))
+    import random
+    rnd = random.Random(5)
+    wave = "".join(
+        f'<rect x="{PX+PW-150+k*8}" y="{PY+34}" width="4" height="10" rx="2" fill="{CYAN}">'
+        f'<animate attributeName="height" values="{";".join(str(rnd.randint(3, 22)) for _ in range(5))}" dur="{rnd.uniform(.5, .9):.2f}s" repeatCount="indefinite"/>'
+        f'<animate attributeName="y" values="{PY+34};{PY+30};{PY+34}" dur=".6s" repeatCount="indefinite"/></rect>'
+        for k in range(16))
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
+  <defs>{ANDROID_DEFS}{defs}
+    <clipPath id="fr"><rect width="{W}" height="{H}" rx="18"/></clipPath>
+    <filter id="big" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="60"/></filter>
+    <linearGradient id="panelB" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{CYAN}"/><stop offset=".5" stop-color="{VIOLET}"/><stop offset="1" stop-color="#ff2bd6"/>
+      <animateTransform attributeName="gradientTransform" type="rotate" from="0 .5 .5" to="360 .5 .5" dur="8s" repeatCount="indefinite"/></linearGradient>
+    {"".join(clips)}
+  </defs>
+  <g clip-path="url(#fr)">
+    <rect width="{W}" height="{H}" fill="#05030f"/>
+    <circle cx="{AX}" cy="{AY}" r="210" fill="{PURPLE}" opacity=".55" filter="url(#big)"/>
+    <circle cx="{AX+120}" cy="{AY+150}" r="150" fill="{CYAN}" opacity=".22" filter="url(#big)"/>
+    <circle cx="820" cy="120" r="170" fill="#ff2bd6" opacity=".15" filter="url(#big)"/>
+    {rays}
+    <!-- floor glow + reflection grid -->
+    <ellipse cx="{AX}" cy="{H-40}" rx="230" ry="24" fill="{CYAN}" opacity=".18" filter="url(#soft)"/>
+    <g transform="translate({AX} {AY}) scale({S})">{android_figure()}</g>
+    {dust}
+    <!-- holographic link -->
+    <path d="M{AX+80},{AY-10} C{AX+160},{AY-60} {PX-60},{PY+60} {PX},{PY+70}" fill="none" stroke="{CYAN}" stroke-opacity=".35" stroke-width="1.5" stroke-dasharray="4 6"/>
+    <circle r="4" fill="{CYAN}" filter="url(#aglow)"><animateMotion path="M{AX+80},{AY-10} C{AX+160},{AY-60} {PX-60},{PY+60} {PX},{PY+70}" dur="2s" repeatCount="indefinite"/></circle>
+    <!-- dialogue panel -->
+    <g opacity="0"><animate attributeName="opacity" from="0" to="1" begin=".3s" dur=".8s" fill="freeze"/>
+      <rect x="{PX}" y="{PY}" width="{PW}" height="{PH}" rx="18" fill="#0d0a24" fill-opacity=".72" stroke="url(#panelB)" stroke-width="2"/>
+      <rect x="{PX}" y="{PY}" width="{PW}" height="{PH}" rx="18" fill="none" stroke="#fff" stroke-opacity=".08" stroke-width="8"/>
+      <circle cx="{PX+28}" cy="{PY+38}" r="6" fill="{GREEN}"><animate attributeName="r" values="5;7;5" dur="1.4s" repeatCount="indefinite"/></circle>
+      <text x="{PX+44}" y="{PY+43}" font-family="{MONO}" font-size="13" font-weight="700" letter-spacing="3" fill="{CYAN}">NOVA · AI ASSISTANT</text>
+      {wave}
+      <line x1="{PX+20}" y1="{PY+64}" x2="{PX+PW-20}" y2="{PY+64}" stroke="{VIOLET}" stroke-opacity=".35"/>
+      <text x="{PX+26}" y="{PY+92}" font-family="{MONO}" font-size="11" letter-spacing="2" fill="{MUTED}">▸ transmitting profile…</text>
+      {"".join(texts)}
+      {dots}
+      <text x="{PX+PW-24}" y="{PY+PH-25}" text-anchor="end" font-family="{MONO}" font-size="10.5" letter-spacing="2" fill="{MUTED}">VOICE · NEURAL TTS</text>
+    </g>
+    <!-- anamorphic flare at eye level -->
+    <ellipse cx="{AX+27}" cy="{AY+2}" rx="380" ry="2.2" fill="url(#flareG)"><animate attributeName="opacity" values=".35;.9;.35" dur="3s" repeatCount="indefinite"/></ellipse>
+    <circle cx="{AX+27}" cy="{AY+2}" r="9" fill="#bff6ff" opacity=".5" filter="url(#aglow)"><animate attributeName="opacity" values=".2;.7;.2" dur="3s" repeatCount="indefinite"/></circle>
+    <rect width="{W}" height="{H}" fill="url(#vig)"/>
+    {bars}
+  </g>
+</svg>'''
+    write("assistant.svg", svg)
+
+
+def journey():
+    W, H = 1000, 410
+    steps = [
+        ("🎓", "B.Sc. Statistics", "Yogi Vemana University", "EDUCATION", VIOLET, False),
+        ("🎓", "M.Sc. Data Science", "VIT Chennai", "EDUCATION", VIOLET, False),
+        ("🤖", "AI/ML Engineer Intern", "ZeAI Soft Pvt. Ltd.", "RAG CHATBOT", CYAN, False),
+        ("⚡", "AI Automation & UI/UX Developer Intern", "Knowvo", "NOW", GREEN, True),
+        ("🧠", "Exec PG · Agentic & Generative AI", "IIT Kharagpur · upGrad", "IN PROGRESS", "#ff2bd6", True),
+    ]
+    n = len(steps)
+    LY = 212
+    xs = [110 + i * 195 for i in range(n)]
+    parts = []
+    parts.append(f'<line x1="{xs[0]}" y1="{LY}" x2="{xs[-1]}" y2="{LY}" stroke="{VIOLET}" stroke-opacity=".25" stroke-width="4" stroke-linecap="round"/>')
+    L = xs[-1] - xs[0]
+    parts.append(f'<line x1="{xs[0]}" y1="{LY}" x2="{xs[-1]}" y2="{LY}" stroke="url(#lineG)" stroke-width="4" stroke-linecap="round" stroke-dasharray="{L}" stroke-dashoffset="{L}">'
+                 f'<animate attributeName="stroke-dashoffset" from="{L}" to="0" dur="2.6s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines=".4 0 .2 1"/></line>')
+    parts.append(f'<circle r="6" cy="{LY}" fill="#fff" filter="url(#jglow)"><animate attributeName="cx" values="{xs[0]};{xs[-1]}" dur="3s" begin="2.6s" repeatCount="indefinite"/>'
+                 f'<animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.9;1" dur="3s" begin="2.6s" repeatCount="indefinite"/></circle>')
+    for i, (e, title, org, tag, c, live) in enumerate(steps):
+        x = xs[i]
+        t = 0.3 + i * 0.5
+        up = i % 2 == 0
+        cy = LY - 112 if up else LY + 112
+        tl = textwrap.wrap(title, 22)[:2]
+        lines = "".join(f'<tspan x="{x}" dy="{0 if k == 0 else 17}">{escape(s)}</tspan>' for k, s in enumerate(tl))
+        ty = cy - (6 if len(tl) == 2 else 0) - 6
+        stem_y1, stem_y2 = (LY - 14, cy + 44) if up else (LY + 14, cy - 44)
+        tw = len(tag) * 7 + 22
+        pulse = (f'<circle cx="{x}" cy="{LY}" r="12" fill="none" stroke="{c}" stroke-width="2"><animate attributeName="r" values="12;26" dur="1.6s" repeatCount="indefinite"/>'
+                 f'<animate attributeName="opacity" values="1;0" dur="1.6s" repeatCount="indefinite"/></circle>') if live else ""
+        parts.append(f'''<g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="{t:.1f}s" dur=".6s" fill="freeze"/>
+      <animateTransform attributeName="transform" type="translate" from="0 {(-16 if up else 16)}" to="0 0" begin="{t:.1f}s" dur=".6s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines=".2 .8 .2 1"/>
+      {pulse}
+      <circle cx="{x}" cy="{LY}" r="12" fill="#0d0a24" stroke="{c}" stroke-width="3" filter="url(#jglow)"/>
+      <circle cx="{x}" cy="{LY}" r="4.5" fill="{c}"/>
+      <line x1="{x}" y1="{stem_y1}" x2="{x}" y2="{stem_y2}" stroke="{c}" stroke-opacity=".6" stroke-width="1.5" stroke-dasharray="3 4"/>
+      <rect x="{x-88}" y="{cy-44}" width="176" height="88" rx="14" fill="#0d0a24" fill-opacity=".85" stroke="{c}" stroke-opacity=".7" stroke-width="1.5"/>
+      <text x="{x-74}" y="{cy-22}" font-size="16">{e}</text>
+      <rect x="{x+80-tw}" y="{cy-36}" width="{tw}" height="18" rx="9" fill="{c}" fill-opacity=".15" stroke="{c}" stroke-opacity=".6"/>
+      <text x="{x+80-tw/2}" y="{cy-23.5}" text-anchor="middle" font-family="{MONO}" font-size="9.5" font-weight="700" letter-spacing="1" fill="{c}">{tag}</text>
+      <text x="{x}" y="{ty+8}" text-anchor="middle" font-family="{SANS}" font-size="13.5" font-weight="800" fill="{TEXT}">{lines}</text>
+      <text x="{x}" y="{cy+34}" text-anchor="middle" font-family="{SANS}" font-size="11.5" fill="#b9b2e6">{escape(org)}</text>
+    </g>''')
+    import random
+    rnd = random.Random(9)
+    stars = "".join(f'<circle cx="{rnd.randint(10, W-10)}" cy="{rnd.randint(30, H-30)}" r="{rnd.choice([.7, 1, 1.3])}" fill="#fff">'
+                    f'<animate attributeName="opacity" values=".1;.8;.1" dur="{rnd.uniform(2, 5):.1f}s" repeatCount="indefinite"/></circle>' for _ in range(50))
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
+  <defs>
+    <clipPath id="fr"><rect width="{W}" height="{H}" rx="18"/></clipPath>
+    <filter id="jglow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="big" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="55"/></filter>
+    <linearGradient id="lineG" x1="0" x2="1"><stop offset="0" stop-color="{VIOLET}"/><stop offset=".55" stop-color="{CYAN}"/><stop offset="1" stop-color="#ff2bd6"/></linearGradient>
+    <linearGradient id="tg" gradientUnits="userSpaceOnUse" x1="0" x2="500" y1="0" y2="0" spreadMethod="repeat">
+      <stop offset="0" stop-color="#c4b5fd"/><stop offset=".5" stop-color="{CYAN}"/><stop offset="1" stop-color="#c4b5fd"/>
+      <animateTransform attributeName="gradientTransform" type="translate" from="0 0" to="500 0" dur="6s" repeatCount="indefinite"/></linearGradient>
+  </defs>
+  <g clip-path="url(#fr)">
+    <rect width="{W}" height="{H}" fill="#06041a"/>
+    <circle cx="250" cy="190" r="170" fill="{PURPLE}" opacity=".35" filter="url(#big)"><animate attributeName="cx" values="250;750;250" dur="18s" repeatCount="indefinite"/></circle>
+    <circle cx="800" cy="200" r="150" fill="{CYAN}" opacity=".18" filter="url(#big)"/>
+    {stars}
+    <text x="{W/2}" y="32" text-anchor="middle" font-family="{MONO}" font-size="13" font-weight="700" letter-spacing="5" fill="url(#tg)">◆ THE JOURNEY SO FAR ◆</text>
+    {"".join(parts)}
+    <text x="{W-20}" y="{H-14}" text-anchor="end" font-family="{MONO}" font-size="10" letter-spacing="2" fill="{MUTED}">to be continued…<animate attributeName="opacity" values="1;.3;1" dur="1.8s" repeatCount="indefinite"/></text>
+  </g>
+  <rect x="1" y="1" width="{W-2}" height="{H-2}" rx="17" fill="none" stroke="url(#tg)" stroke-width="1.5" opacity=".7"/>
+</svg>'''
+    write("journey.svg", svg)
+
+
+def footer_scene():
+    W, H = 1000, 300
+    defs, rays, dust, bars = cinematic_frame(W, H, "END CREDITS")
+    AX, AY, S = 190, 132, .74
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
+  <defs>{ANDROID_DEFS}{defs}
+    <clipPath id="fr"><rect width="{W}" height="{H}" rx="18"/></clipPath>
+    <filter id="big" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="55"/></filter>
+    <filter id="tglow" x="-10%" y="-50%" width="120%" height="200%"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <linearGradient id="tg" gradientUnits="userSpaceOnUse" x1="0" x2="600" y1="0" y2="0" spreadMethod="repeat">
+      <stop offset="0" stop-color="#c4b5fd"/><stop offset=".33" stop-color="{CYAN}"/><stop offset=".66" stop-color="#ff2bd6"/><stop offset="1" stop-color="#c4b5fd"/>
+      <animateTransform attributeName="gradientTransform" type="translate" from="0 0" to="600 0" dur="6s" repeatCount="indefinite"/></linearGradient>
+  </defs>
+  <g clip-path="url(#fr)">
+    <rect width="{W}" height="{H}" fill="#05030f"/>
+    <circle cx="{AX}" cy="{AY+40}" r="160" fill="{PURPLE}" opacity=".5" filter="url(#big)"/>
+    <circle cx="700" cy="150" r="170" fill="{CYAN}" opacity=".16" filter="url(#big)"/>
+    {rays}
+    <g transform="translate({AX} {AY}) scale({S})">{android_figure(wave=True)}</g>
+    {dust}
+    <g opacity="0"><animate attributeName="opacity" from="0" to="1" begin=".3s" dur="1s" fill="freeze"/>
+      <text x="640" y="118" text-anchor="middle" font-family="{SANS}" font-size="44" font-weight="800" fill="url(#tg)" filter="url(#tglow)">Thanks for visiting!</text>
+      <text x="640" y="156" text-anchor="middle" font-family="{SANS}" font-size="17" fill="#d6d0fa">Let's build something intelligent together.</text>
+      <text x="640" y="192" text-anchor="middle" font-family="{MONO}" font-size="12" letter-spacing="3" fill="{CYAN}">— NOVA &amp; NEELIMA —</text>
+      <rect x="560" y="210" width="160" height="2" fill="url(#tg)"><animate attributeName="width" values="40;160;40" dur="4s" repeatCount="indefinite"/>
+        <animate attributeName="x" values="620;560;620" dur="4s" repeatCount="indefinite"/></rect>
+    </g>
+    <ellipse cx="{AX+20}" cy="{AY+2}" rx="300" ry="1.8" fill="url(#flareG)"><animate attributeName="opacity" values=".3;.85;.3" dur="3s" repeatCount="indefinite"/></ellipse>
+    <rect width="{W}" height="{H}" fill="url(#vig)"/>
+    {bars}
+  </g>
+</svg>'''
+    write("footer.svg", svg)
+
+
+
 if __name__ == "__main__":
     hero()
+    assistant_scene()
+    journey()
+    footer_scene()
     about()
     pipeline()
     for i, r in enumerate(REPOS + MORE_REPOS):
