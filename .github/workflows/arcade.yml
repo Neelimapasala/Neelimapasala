@@ -18,22 +18,14 @@ jobs:
       - name: Check out the repo
         uses: actions/checkout@v4
 
-      - name: Pac-Man, Galaga, Breakout, Tetris
+      - name: Pac-Man AI
         uses: abozanona/pacman-contribution-graph@main
         with:
           github_user_name: ${{ github.repository_owner }}
-          games: "pacman,galaga,breakout,tetris"
+          games: "pacman"
           player_style: "aggressive"
 
-      - name: Snake
-        uses: Platane/snk/svg-only@v3
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          outputs: |
-            dist/github-snake.svg
-            dist/github-snake-dark.svg?palette=github-dark&color_snake=#a78bfa&color_dots=#161b22,#3b2a6b,#5b2bb5,#7f00ff,#00d4ff
-
-      - name: About-me card, repo cards and AI games
+      - name: About-me card, AI pipeline, repo cards and AI games
         run: |
           python3 scripts/make_svgs.py
           mkdir -p dist
