@@ -1,7 +1,7 @@
 <!-- ===================== HERO ===================== -->
 <p align="center">
   <a href="https://github.com/Neelimapasala">
-    <img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/hero.svg" width="100%" alt="Pasala Neelima, AI/ML Engineer, Generative AI Builder, LLM, RAG, AI Agents, Computer Vision and NLP"/>
+    <img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/hero.svg?v=3" width="100%" alt="Pasala Neelima, AI/ML Engineer, Generative AI Builder, LLM, RAG, AI Agents, Computer Vision and NLP"/>
   </a>
 </p>
 
@@ -16,17 +16,39 @@
 ## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Laptop.png" width="34" align="center"/> About Me
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/about.svg" width="100%" alt="Animated terminal: Pasala Neelima, AI/ML Engineer and Data Scientist, M.Sc. Data Science at VIT, focused on GenAI, AI agents, RAG, NLP and computer vision"/>
+  <img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/assistant.svg?v=3" width="100%" alt="NOVA, an android AI assistant, introducing Neelima Pasala: aspiring Applied AI Engineer, AI Automation and UI/UX Developer Intern at Knowvo, former AI/ML Engineer Intern at ZeAI Soft"/>
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Graduation%20Cap.png" width="22"/> <b>M.Sc. Data Science @ VIT</b> &nbsp;•&nbsp;
+  <img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/about.svg?v=3" width="100%" alt="Animated terminal: Pasala Neelima, AI/ML Engineer and Data Scientist, M.Sc. Data Science at VIT, focused on GenAI, AI agents, RAG, NLP and computer vision"/>
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Graduation%20Cap.png" width="22"/> <b>M.Sc. Data Science @ VIT Chennai</b> &nbsp;•&nbsp;
   <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Round%20Pushpin.png" width="22"/> <b>Chennai, India</b> &nbsp;•&nbsp;
   <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Bullseye.png" width="22"/> <b>Open to AI/ML & GenAI roles</b>
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/pipeline.svg" width="100%" alt="AI workflow: Data, EDA, ML/DL, LLM + RAG, AI Agent, Deploy"/>
+  <img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/journey.svg?v=3" width="100%" alt="Journey: B.Sc. Statistics at Yogi Vemana University, M.Sc. Data Science at VIT Chennai, AI/ML Engineer Intern at ZeAI Soft, AI Automation and UI/UX Developer Intern at Knowvo (current), Executive PG in Agentic and Generative AI at IIT Kharagpur via upGrad (in progress)"/>
+</p>
+
+<details>
+<summary><b>💼 Experience & education details (click to expand)</b></summary>
+<br/>
+
+| | Role / Program | Where | Highlights |
+|---|---|---|---|
+| ⚡ | **AI Automation & UI/UX Developer Intern** *(current)* | Knowvo | Automation workflows, AI-assisted development, business logic, dashboards, frontend/UI/UX improvements |
+| 🤖 | **AI/ML Engineer Intern** | ZeAI Soft Pvt. Ltd. | Built an AI customer-support chatbot with Python, FastAPI, RAG, ChromaDB, Groq LLMs and MySQL |
+| 🧠 | **Executive PG Program, Agentic & Generative AI** *(in progress)* | IIT Kharagpur · upGrad | |
+| 🎓 | **M.Sc. Data Science** | VIT Chennai | |
+| 🎓 | **B.Sc. Statistics** | Yogi Vemana University | |
+
+</details>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/pipeline.svg?v=3" width="100%" alt="AI workflow: Data, EDA, ML/DL, LLM + RAG, AI Agent, Deploy"/>
 </p>
 
 ---
@@ -42,6 +64,8 @@
   <img src="https://img.shields.io/badge/Vector%20DBs-0f766e?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white"/>
   <img src="https://img.shields.io/badge/Hugging%20Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black"/>
+  <img src="https://img.shields.io/badge/ChromaDB-FF6446?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Groq%20LLMs-F55036?style=for-the-badge"/>
 </p>
 
 <p align="center"><b>🧠 Machine Learning & Deep Learning</b></p>
@@ -77,7 +101,7 @@
 
 <p align="center"><b>🚀 MLOps, Deployment & Tools</b></p>
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=fastapi,flask,git,github,vscode&theme=dark" />
+  <img src="https://skillicons.dev/icons?i=fastapi,flask,react,mysql,git,github,vscode&theme=dark" />
   <br/>
   <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white"/>
   <img src="https://img.shields.io/badge/Google%20Colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=black"/>
@@ -104,30 +128,30 @@
 ---
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/projects-header.svg" width="100%" alt="Featured AI projects"/>
+  <img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/projects-header.svg?v=3" width="100%" alt="Featured AI projects"/>
 </p>
 
 <p align="center">
-  <a href="https://github.com/Neelimapasala/DecisionTwin-AI-_Agentic-AI"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-decisiontwin.svg?v=2" width="49%" alt="DecisionTwin AI"/></a>
-  <a href="https://github.com/Neelimapasala/tracelens-AI"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-tracelens.svg?v=2" width="49%" alt="TraceLens AI"/></a>
-  <a href="https://github.com/Neelimapasala/vidai_studio-"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-vidai.svg?v=2" width="49%" alt="VidAI Studio"/></a>
-  <a href="https://github.com/Neelimapasala/AI-Bug-Detection-Agent"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-bugagent.svg?v=2" width="49%" alt="AI Bug Detection Agent"/></a>
-  <a href="https://github.com/Neelimapasala/backend_Rag_Chatbot"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-rag.svg?v=2" width="49%" alt="RAG Chatbot Backend"/></a>
-  <a href="https://github.com/Neelimapasala/quick-part---efficent-slot-parking-and-traffic-insights"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-quickpark.svg?v=2" width="49%" alt="QuickPark"/></a>
-  <a href="https://github.com/Neelimapasala/AgriAI---Plant-Disease-Diagnosis-System"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-agriai.svg?v=2" width="49%" alt="AgriAI Plant Disease Diagnosis"/></a>
-  <a href="https://github.com/Neelimapasala/tiger-vs-jaguar-image-classification"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-tigerjaguar.svg?v=2" width="49%" alt="Tiger vs Jaguar Classifier"/></a>
+  <a href="https://github.com/Neelimapasala/DecisionTwin-AI-_Agentic-AI"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-decisiontwin.svg?v=3" width="49%" alt="DecisionTwin AI"/></a>
+  <a href="https://github.com/Neelimapasala/tracelens-AI"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-tracelens.svg?v=3" width="49%" alt="TraceLens AI"/></a>
+  <a href="https://github.com/Neelimapasala/vidai_studio-"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-vidai.svg?v=3" width="49%" alt="VidAI Studio"/></a>
+  <a href="https://github.com/Neelimapasala/AI-Bug-Detection-Agent"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-bugagent.svg?v=3" width="49%" alt="AI Bug Detection Agent"/></a>
+  <a href="https://github.com/Neelimapasala/backend_Rag_Chatbot"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-rag.svg?v=3" width="49%" alt="RAG Chatbot Backend"/></a>
+  <a href="https://github.com/Neelimapasala/quick-part---efficent-slot-parking-and-traffic-insights"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-quickpark.svg?v=3" width="49%" alt="QuickPark"/></a>
+  <a href="https://github.com/Neelimapasala/AgriAI---Plant-Disease-Diagnosis-System"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-agriai.svg?v=3" width="49%" alt="AgriAI Plant Disease Diagnosis"/></a>
+  <a href="https://github.com/Neelimapasala/tiger-vs-jaguar-image-classification"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-tigerjaguar.svg?v=3" width="49%" alt="Tiger vs Jaguar Classifier"/></a>
 </p>
 
 <details>
 <summary><b>🧪 6 more AI projects: QueryMind · DocMind · Prompt Optimizer · Support Agent · Disaster AI · Sentiment (click to expand)</b></summary>
 <br/>
 <p align="center">
-  <a href="https://github.com/Neelimapasala/SQL-agent-chatbot"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-querymind.svg?v=2" width="49%" alt="QueryMind SQL Agent"/></a>
-  <a href="https://github.com/Neelimapasala/DOC-MIND"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-docmind.svg?v=2" width="49%" alt="DocMind AI"/></a>
-  <a href="https://github.com/Neelimapasala/prompt-ai-optimizer"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-promptopt.svg?v=2" width="49%" alt="Prompt AI Optimizer"/></a>
-  <a href="https://github.com/Neelimapasala/E-commerce-Support-Resolution-Agent"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-supportagent.svg?v=2" width="49%" alt="E-commerce Support Resolution Agent"/></a>
-  <a href="https://github.com/Neelimapasala/disaster-intelligent-system"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-disaster.svg?v=2" width="49%" alt="Disaster Intelligence System"/></a>
-  <a href="https://github.com/Neelimapasala/sentimental-analysis-on-twitter"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-sentiment.svg?v=2" width="49%" alt="Twitter Sentiment Analysis"/></a>
+  <a href="https://github.com/Neelimapasala/SQL-agent-chatbot"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-querymind.svg?v=3" width="49%" alt="QueryMind SQL Agent"/></a>
+  <a href="https://github.com/Neelimapasala/DOC-MIND"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-docmind.svg?v=3" width="49%" alt="DocMind AI"/></a>
+  <a href="https://github.com/Neelimapasala/prompt-ai-optimizer"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-promptopt.svg?v=3" width="49%" alt="Prompt AI Optimizer"/></a>
+  <a href="https://github.com/Neelimapasala/E-commerce-Support-Resolution-Agent"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-supportagent.svg?v=3" width="49%" alt="E-commerce Support Resolution Agent"/></a>
+  <a href="https://github.com/Neelimapasala/disaster-intelligent-system"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-disaster.svg?v=3" width="49%" alt="Disaster Intelligence System"/></a>
+  <a href="https://github.com/Neelimapasala/sentimental-analysis-on-twitter"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-sentiment.svg?v=3" width="49%" alt="Twitter Sentiment Analysis"/></a>
 </p>
 </details>
 
@@ -144,16 +168,16 @@
 <p align="center"><i>Classic AI algorithms in action: game-tree search, reinforcement learning and path-finding agents.</i></p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/game-tictactoe.svg" width="49%" alt="Tic-tac-toe against a minimax AI"/>
-  <img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/game-runner.svg" width="49%" alt="AI agent runner dodging bugs"/>
+  <img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/game-tictactoe.svg?v=3" width="49%" alt="Tic-tac-toe against a minimax AI"/>
+  <img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/game-runner.svg?v=3" width="49%" alt="AI agent runner dodging bugs"/>
 </p>
 
 <p align="center"><b>👻 Pac-Man AI agent clearing my contribution graph</b> <i>(path-finding · ghost-avoidance)</i></p>
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/pacman-contribution-graph-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/pacman-contribution-graph.svg">
-    <img alt="Pac-Man contribution graph" src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/pacman-contribution-graph.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/pacman-contribution-graph-dark.svg?v=3">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/pacman-contribution-graph.svg?v=3">
+    <img alt="Pac-Man contribution graph" src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/pacman-contribution-graph.svg?v=3">
   </picture>
 </p>
 
@@ -197,11 +221,5 @@
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Sparkles.png" width="22"/>
-  <i>"Transforming data into intelligence and ideas into impactful AI solutions."</i>
-  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Sparkles.png" width="22"/>
-</p>
-
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:00d4ff,50:7f00ff,100:0f0c29&height=120&section=footer" width="100%" alt="footer"/>
+  <img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/footer.svg?v=3" width="100%" alt="NOVA the android waving: Thanks for visiting! Let's build something intelligent together."/>
 </p>
