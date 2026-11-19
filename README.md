@@ -167,7 +167,7 @@
 ## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Bar%20Chart.png" width="34" align="center"/> GitHub Stats
 
 <p align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=Neelimapasala&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=a78bfa&icon_color=00d4ff&count_private=true&include_all_commits=true" alt="stats"/>
+  <img height="170" src="https://github-readme-stats.vercel.app/api?username=Neelimapasala&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=a78bfa&icon_color=00d4ff" alt="stats"/>
   <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Neelimapasala&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=a78bfa&langs_count=8" alt="top languages"/>
 </p>
 
