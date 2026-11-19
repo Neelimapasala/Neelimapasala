@@ -136,7 +136,7 @@
   <a href="https://github.com/Neelimapasala/tracelens-AI"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-tracelens.svg?v=3" width="49%" alt="TraceLens AI"/></a>
   <a href="https://github.com/Neelimapasala/vidai_studio-"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-vidai.svg?v=3" width="49%" alt="VidAI Studio"/></a>
   <a href="https://github.com/Neelimapasala/AI-Bug-Detection-Agent"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-bugagent.svg?v=3" width="49%" alt="AI Bug Detection Agent"/></a>
-  <a href="https://github.com/Neelimapasala/backend_Rag_Chatbot"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-rag.svg?v=3" width="49%" alt="RAG Chatbot Backend"/></a>
+  <a href="https://github.com/Neelimapasala/backend_Rag_Chatbot"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-rag.svg?v=4" width="49%" alt="RAG Support Chatbot"/></a>
   <a href="https://github.com/Neelimapasala/quick-part---efficent-slot-parking-and-traffic-insights"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-quickpark.svg?v=3" width="49%" alt="QuickPark"/></a>
   <a href="https://github.com/Neelimapasala/AgriAI---Plant-Disease-Diagnosis-System"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-agriai.svg?v=3" width="49%" alt="AgriAI Plant Disease Diagnosis"/></a>
   <a href="https://github.com/Neelimapasala/tiger-vs-jaguar-image-classification"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-tigerjaguar.svg?v=3" width="49%" alt="Tiger vs Jaguar Classifier"/></a>
