@@ -282,8 +282,50 @@ def runner():
     write("game-runner.svg", svg)
 
 
+# ------------------------------------------------------------------ AI WORKFLOW PIPELINE
+def pipeline():
+    W, H, CYC = 860, 230, 7.0
+    steps = [("📊", "Data", "collect · clean"), ("🔬", "EDA", "explore · insight"),
+             ("🧠", "ML / DL", "train · tune"), ("💬", "LLM + RAG", "retrieve · gen"),
+             ("🤖", "AI Agent", "reason · act"), ("🚀", "Deploy", "API · app")]
+    n = len(steps)
+    bw, bh, gap = 112, 110, 26
+    x0 = (W - (n * bw + (n - 1) * gap)) / 2
+    y = 78
+    path_y = y + bh / 2
+    first_x, last_x = x0 + bw / 2, x0 + (n - 1) * (bw + gap) + bw / 2
+    parts = [f'<line x1="{first_x}" y1="{path_y}" x2="{last_x}" y2="{path_y}" stroke="{VIOLET}" stroke-opacity=".35" stroke-width="2" stroke-dasharray="6 6">'
+             f'<animate attributeName="stroke-dashoffset" from="24" to="0" dur=".8s" repeatCount="indefinite"/></line>']
+    for i, (e, t, sub) in enumerate(steps):
+        x = x0 + i * (bw + gap)
+        a = (i / (n - 1)) * 0.8
+        hl = (f'values="{VIOLET};{VIOLET};{CYAN};{VIOLET};{VIOLET}" '
+              f'keyTimes="0;{max(a - .001, 0):.3f};{a + .04:.3f};{min(a + .16, 0.99):.3f};1"')
+        parts.append(
+            f'<g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="{i * 0.15:.2f}s" dur=".5s" fill="freeze"/>'
+            f'<rect x="{x}" y="{y}" width="{bw}" height="{bh}" rx="14" fill="{PANEL}" stroke="{VIOLET}" stroke-width="2">'
+            f'<animate attributeName="stroke" dur="{CYC}s" repeatCount="indefinite" {hl}/></rect>'
+            f'<text x="{x + bw / 2}" y="{y + 42}" text-anchor="middle" font-size="28">{e}</text>'
+            f'<text x="{x + bw / 2}" y="{y + 72}" text-anchor="middle" font-family="{SANS}" font-size="14" font-weight="700" fill="{TEXT}">{escape(t)}</text>'
+            f'<text x="{x + bw / 2}" y="{y + 92}" text-anchor="middle" font-family="{MONO}" font-size="10" fill="{MUTED}">{escape(sub)}</text></g>')
+    parts.append(
+        f'<circle r="7" cx="{first_x}" cy="{path_y}" fill="{CYAN}">'
+        f'<animate attributeName="cx" values="{first_x};{last_x};{last_x}" keyTimes="0;.8;1" dur="{CYC}s" repeatCount="indefinite"/>'
+        f'<animate attributeName="opacity" values="1;1;0;0" keyTimes="0;.8;.82;1" dur="{CYC}s" repeatCount="indefinite"/>'
+        f'<animate attributeName="r" values="6;9;6" dur=".7s" repeatCount="indefinite"/></circle>')
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
+  {neon_border(W, H, 14, 8)}
+  <text x="{W / 2}" y="40" text-anchor="middle" font-family="{SANS}" font-size="15" font-weight="700" fill="{VIOLET}" letter-spacing="3">HOW I BUILD AI · END TO END</text>
+  <text x="{W / 2}" y="60" text-anchor="middle" font-family="{MONO}" font-size="11" fill="{MUTED}">from raw data to deployed intelligent agents</text>
+  {"".join(parts)}
+  <text x="{W / 2}" y="{H - 14}" text-anchor="middle" font-family="{MONO}" font-size="11" fill="{GREEN}" opacity="0">✔ model shipped<animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;.8;.82;.98;1" dur="{CYC}s" repeatCount="indefinite"/></text>
+</svg>'''
+    write("pipeline.svg", svg)
+
+
 if __name__ == "__main__":
     about()
+    pipeline()
     for i, r in enumerate(REPOS):
         repo_card(*r, i)
     tictactoe()
