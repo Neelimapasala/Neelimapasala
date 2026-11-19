@@ -108,26 +108,26 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Neelimapasala/DecisionTwin-AI-_Agentic-AI"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-decisiontwin.svg" width="49%" alt="DecisionTwin AI"/></a>
-  <a href="https://github.com/Neelimapasala/tracelens-AI"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-tracelens.svg" width="49%" alt="TraceLens AI"/></a>
-  <a href="https://github.com/Neelimapasala/vidai_studio-"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-vidai.svg" width="49%" alt="VidAI Studio"/></a>
-  <a href="https://github.com/Neelimapasala/AI-Bug-Detection-Agent"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-bugagent.svg" width="49%" alt="AI Bug Detection Agent"/></a>
-  <a href="https://github.com/Neelimapasala/backend_Rag_Chatbot"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-rag.svg" width="49%" alt="RAG Chatbot Backend"/></a>
-  <a href="https://github.com/Neelimapasala/quick-part---efficent-slot-parking-and-traffic-insights"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-quickpark.svg" width="49%" alt="QuickPark"/></a>
-  <a href="https://github.com/Neelimapasala/AgriAI---Plant-Disease-Diagnosis-System"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-agriai.svg" width="49%" alt="AgriAI Plant Disease Diagnosis"/></a>
-  <a href="https://github.com/Neelimapasala/tiger-vs-jaguar-image-classification"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-tigerjaguar.svg" width="49%" alt="Tiger vs Jaguar Classifier"/></a>
+  <a href="https://github.com/Neelimapasala/DecisionTwin-AI-_Agentic-AI"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-decisiontwin.svg?v=2" width="49%" alt="DecisionTwin AI"/></a>
+  <a href="https://github.com/Neelimapasala/tracelens-AI"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-tracelens.svg?v=2" width="49%" alt="TraceLens AI"/></a>
+  <a href="https://github.com/Neelimapasala/vidai_studio-"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-vidai.svg?v=2" width="49%" alt="VidAI Studio"/></a>
+  <a href="https://github.com/Neelimapasala/AI-Bug-Detection-Agent"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-bugagent.svg?v=2" width="49%" alt="AI Bug Detection Agent"/></a>
+  <a href="https://github.com/Neelimapasala/backend_Rag_Chatbot"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-rag.svg?v=2" width="49%" alt="RAG Chatbot Backend"/></a>
+  <a href="https://github.com/Neelimapasala/quick-part---efficent-slot-parking-and-traffic-insights"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-quickpark.svg?v=2" width="49%" alt="QuickPark"/></a>
+  <a href="https://github.com/Neelimapasala/AgriAI---Plant-Disease-Diagnosis-System"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-agriai.svg?v=2" width="49%" alt="AgriAI Plant Disease Diagnosis"/></a>
+  <a href="https://github.com/Neelimapasala/tiger-vs-jaguar-image-classification"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-tigerjaguar.svg?v=2" width="49%" alt="Tiger vs Jaguar Classifier"/></a>
 </p>
 
 <details>
 <summary><b>🧪 6 more AI projects: QueryMind · DocMind · Prompt Optimizer · Support Agent · Disaster AI · Sentiment (click to expand)</b></summary>
 <br/>
 <p align="center">
-  <a href="https://github.com/Neelimapasala/SQL-agent-chatbot"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-querymind.svg" width="49%" alt="QueryMind SQL Agent"/></a>
-  <a href="https://github.com/Neelimapasala/DOC-MIND"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-docmind.svg" width="49%" alt="DocMind AI"/></a>
-  <a href="https://github.com/Neelimapasala/prompt-ai-optimizer"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-promptopt.svg" width="49%" alt="Prompt AI Optimizer"/></a>
-  <a href="https://github.com/Neelimapasala/E-commerce-Support-Resolution-Agent"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-supportagent.svg" width="49%" alt="E-commerce Support Resolution Agent"/></a>
-  <a href="https://github.com/Neelimapasala/disaster-intelligent-system"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-disaster.svg" width="49%" alt="Disaster Intelligence System"/></a>
-  <a href="https://github.com/Neelimapasala/sentimental-analysis-on-twitter"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-sentiment.svg" width="49%" alt="Twitter Sentiment Analysis"/></a>
+  <a href="https://github.com/Neelimapasala/SQL-agent-chatbot"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-querymind.svg?v=2" width="49%" alt="QueryMind SQL Agent"/></a>
+  <a href="https://github.com/Neelimapasala/DOC-MIND"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-docmind.svg?v=2" width="49%" alt="DocMind AI"/></a>
+  <a href="https://github.com/Neelimapasala/prompt-ai-optimizer"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-promptopt.svg?v=2" width="49%" alt="Prompt AI Optimizer"/></a>
+  <a href="https://github.com/Neelimapasala/E-commerce-Support-Resolution-Agent"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-supportagent.svg?v=2" width="49%" alt="E-commerce Support Resolution Agent"/></a>
+  <a href="https://github.com/Neelimapasala/disaster-intelligent-system"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-disaster.svg?v=2" width="49%" alt="Disaster Intelligence System"/></a>
+  <a href="https://github.com/Neelimapasala/sentimental-analysis-on-twitter"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-sentiment.svg?v=2" width="49%" alt="Twitter Sentiment Analysis"/></a>
 </p>
 </details>
 
