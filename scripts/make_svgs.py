@@ -129,7 +129,7 @@ REPOS = [
     ("tracelens", "🔍", "TraceLens AI", "AI DEVTOOLS", "AI debugging workspace that links logs, code diffs and API context into evidence-backed findings, patches and tests.", ["AI Agents", "DevTools", "LLMs"]),
     ("vidai", "🎬", "VidAI Studio", "GENERATIVE AI", "One prompt → a full video: AI scripts, scenes, voice-overs, captions and FFmpeg rendering.", ["Python", "GenAI", "FFmpeg"]),
     ("bugagent", "🐞", "AI Bug Detection Agent", "AI AGENT", "An intelligent agent that scans code to detect and explain bugs automatically.", ["AI Agents", "LLMs", "Code Analysis"]),
-    ("rag", "📚", "RAG Chatbot Backend", "RAG · LLM", "Retrieval-Augmented Generation chatbot backend for grounded, document-aware answers.", ["Python", "RAG", "Vector DB"]),
+    ("rag", "📚", "RAG Support Chatbot", "RAG · LLM", "AI customer-support chatbot backend built at ZeAI Soft: FastAPI + RAG with ChromaDB, Groq LLMs and MySQL.", ["FastAPI", "ChromaDB", "Groq"]),
     ("quickpark", "🚗", "QuickPark", "COMPUTER VISION", "Smart parking with computer vision for slot detection, booking and traffic insights.", ["Python", "OpenCV", "Analytics"]),
     ("agriai", "🌿", "AgriAI · Plant Disease Dx", "DEEP LEARNING", "Detects plant diseases from leaf images so farmers can act early.", ["Deep Learning", "CNN", "AgriTech"]),
     ("tigerjaguar", "🐯", "Tiger vs Jaguar Classifier", "COMPUTER VISION", "CNN-based wildlife image classifier evaluated with standard performance metrics.", ["TensorFlow", "CNN", "Vision"]),
@@ -896,6 +896,166 @@ def footer_scene():
 
 
 
+# ------------------------------------------------------------------ PER-REPOSITORY CINEMATIC BANNERS
+TAGLINES = {
+    "decisiontwin": "Ask a business question. Simulate the future.",
+    "tracelens": "Evidence-linked AI debugging for real systems.",
+    "vidai": "One prompt in. A complete video out.",
+    "bugagent": "An AI agent that finds and explains bugs.",
+    "rag": "Grounded support answers with RAG + Groq.",
+    "quickpark": "Computer vision for smarter parking.",
+    "agriai": "Spot plant disease from a single leaf.",
+    "tigerjaguar": "Deep learning that tells big cats apart.",
+    "querymind": "Talk to your database in plain English.",
+    "docmind": "Ask anything. Understand everything.",
+    "promptopt": "Turn rough prompts into great ones.",
+    "supportagent": "Policy-grounded support, multi-agent RAG.",
+    "disaster": "AI-powered disaster intelligence.",
+    "sentiment": "Reading public mood from tweets.",
+}
+
+
+def repo_banner(slug, icon, title, cat, desc, tags, idx):
+    import random
+    rnd = random.Random(idx + 100)
+    W, H = 1000, 320
+    a1, a2 = ACCENTS[idx % len(ACCENTS)]
+    t1, t2 = (VIOLET if a1 == PURPLE else a1), (VIOLET if a2 == PURPLE else a2)
+    tag = TAGLINES[slug]
+    fs = min(52, 560 / (len(title) * 0.56))
+    TX, TY = 60, 150
+    blobs = (f'<circle cx="200" cy="80" r="170" fill="{a1}" opacity=".5" filter="url(#bl)"><animate attributeName="cx" values="200;360;200" dur="14s" repeatCount="indefinite"/></circle>'
+             f'<circle cx="820" cy="220" r="160" fill="{a2}" opacity=".3" filter="url(#bl)"/>')
+    vx, vy = 500, 230
+    grid = "".join(f'<line x1="{vx}" y1="{vy}" x2="{x}" y2="{H}"/>' for x in range(-600, 1601, 110))
+    hl = "".join(f'<line x1="0" x2="{W}" y1="{vy}" y2="{vy}"><animate attributeName="y1" values="{vy};{H}" dur="3s" begin="{-i*0.75}s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".6 0 1 1"/>'
+                 f'<animate attributeName="y2" values="{vy};{H}" dur="3s" begin="{-i*0.75}s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".6 0 1 1"/></line>' for i in range(4))
+    parts = "".join(
+        f'<circle cx="{x}" cy="{y}" r="{r}" fill="{c}"><animate attributeName="cy" values="{y};{y-45}" dur="{d:.1f}s" begin="{-rnd.uniform(0,d):.1f}s" repeatCount="indefinite"/>'
+        f'<animate attributeName="opacity" values="0;.9;0" dur="{d:.1f}s" begin="{-rnd.uniform(0,d):.1f}s" repeatCount="indefinite"/></circle>'
+        for x, y, r, c, d in [(rnd.randint(10, W-10), rnd.randint(20, H-10), rnd.choice([.8, 1.1, 1.6]), rnd.choice(["#fff", t1, t2]), rnd.uniform(5, 10)) for _ in range(36)])
+    # typed tagline
+    CYC = 9.0
+    tw = len(tag) * 11.4 + 6
+    kt = f"0;{0.5/CYC:.3f};{2.1/CYC:.3f};{8.2/CYC:.3f};{8.7/CYC:.3f};1"
+    tagline = (f'<clipPath id="tc"><rect x="{TX+26}" y="{TY+22}" height="34" width="0"><animate attributeName="width" values="0;0;{tw:.0f};{tw:.0f};0;0" keyTimes="{kt}" dur="{CYC}s" repeatCount="indefinite"/></rect></clipPath>')
+    cursor = (f'<rect x="{TX+26}" y="{TY+27}" width="3" height="24" fill="{CYAN}"><animate attributeName="x" values="{TX+26};{TX+26};{TX+26+tw:.0f};{TX+26+tw:.0f};{TX+26};{TX+26}" keyTimes="{kt}" dur="{CYC}s" repeatCount="indefinite"/>'
+              f'<animate attributeName="opacity" values="1;0;1" dur=".9s" repeatCount="indefinite"/></rect>')
+    cx, chips = TX, []
+    for i, tg in enumerate(tags):
+        w = len(tg) * 7.6 + 26
+        chips.append(f'<g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="{0.9+i*0.18:.2f}s" dur=".5s" fill="freeze"/>'
+                     f'<animateTransform attributeName="transform" type="translate" from="0 8" to="0 0" begin="{0.9+i*0.18:.2f}s" dur=".5s" fill="freeze"/>'
+                     f'<rect x="{cx}" y="{TY+76}" width="{w:.0f}" height="28" rx="14" fill="#0d0a1f" fill-opacity=".8" stroke="{t1}" stroke-opacity=".7"/>'
+                     f'<text x="{cx+w/2:.0f}" y="{TY+95}" text-anchor="middle" font-family="{SANS}" font-size="12.5" font-weight="700" fill="{TEXT}">{escape(tg)}</text></g>')
+        cx += w + 10
+    # core + orbiting tags
+    OX, OY = 815, 150
+    orbit = []
+    for k, tg in enumerate(tags):
+        r, d = (108, 15) if k != 1 else (74, 10)
+        path = f"M{OX-r},{OY} a{r},{r} 0 1,1 {2*r},0 a{r},{r} 0 1,1 {-2*r},0"
+        w = len(tg) * 7 + 18
+        c = [t1, t2, GREEN][k % 3]
+        orbit.append(f'<g><animateMotion path="{path}" dur="{d}s" begin="{-k*d/3:.1f}s" repeatCount="indefinite"/>'
+                     f'<rect x="{-w/2}" y="-11" width="{w}" height="22" rx="11" fill="#0d0a1f" stroke="{c}" stroke-width="1.5"/>'
+                     f'<text x="0" y="4.5" text-anchor="middle" font-family="{MONO}" font-size="10.5" font-weight="700" fill="{c}">{escape(tg)}</text></g>')
+    cw = len(cat) * 7.4 + 34
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
+  <defs>
+    <clipPath id="fr"><rect width="{W}" height="{H}" rx="20"/></clipPath>
+    <filter id="bl" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="55"/></filter>
+    <filter id="gl" x="-10%" y="-40%" width="120%" height="180%"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="ig" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <linearGradient id="tg" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="600" y2="0" spreadMethod="repeat">
+      <stop offset="0" stop-color="#ece4ff"/><stop offset=".33" stop-color="{t1}"/><stop offset=".66" stop-color="{t2}"/><stop offset="1" stop-color="#ece4ff"/>
+      <animateTransform attributeName="gradientTransform" type="translate" from="0 0" to="600 0" dur="6s" repeatCount="indefinite"/></linearGradient>
+    <linearGradient id="gf" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff" stop-opacity="1"/></linearGradient>
+    <mask id="gm"><rect x="0" y="{vy}" width="{W}" height="{H-vy}" fill="url(#gf)"/></mask>
+    <linearGradient id="sh" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <clipPath id="nc"><text x="{TX}" y="{TY}" font-family="{SANS}" font-size="{fs:.0f}" font-weight="800">{escape(title)}</text></clipPath>
+    <radialGradient id="cg"><stop offset="0" stop-color="{a1}" stop-opacity=".5"/><stop offset=".6" stop-color="{a1}" stop-opacity=".08"/><stop offset="1" stop-color="{a1}" stop-opacity="0"/></radialGradient>
+    <linearGradient id="sw" x1="0" x2="1"><stop offset="0" stop-color="{t2}" stop-opacity="0"/><stop offset="1" stop-color="{t2}" stop-opacity=".45"/></linearGradient>
+    {tagline}
+  </defs>
+  <g clip-path="url(#fr)">
+    <rect width="{W}" height="{H}" fill="#07051a"/>
+    {blobs}
+    <g mask="url(#gm)" stroke="{a1}" stroke-width="1.2" opacity=".55">{grid}{hl}</g>
+    {parts}
+    <rect x="0" y="0" width="{W}" height="2" fill="{t2}" opacity=".2"><animate attributeName="y" values="0;{H}" dur="5s" repeatCount="indefinite"/></rect>
+    <!-- core -->
+    <circle cx="{OX}" cy="{OY}" r="140" fill="url(#cg)"/>
+    <circle cx="{OX}" cy="{OY}" r="108" fill="none" stroke="{t1}" stroke-opacity=".35" stroke-dasharray="2 8"><animateTransform attributeName="transform" type="rotate" from="0 {OX} {OY}" to="360 {OX} {OY}" dur="40s" repeatCount="indefinite"/></circle>
+    <circle cx="{OX}" cy="{OY}" r="74" fill="none" stroke="{t2}" stroke-opacity=".35" stroke-dasharray="12 6"><animateTransform attributeName="transform" type="rotate" from="360 {OX} {OY}" to="0 {OX} {OY}" dur="24s" repeatCount="indefinite"/></circle>
+    <path d="M{OX},{OY} L{OX+108},{OY} A108,108 0 0,0 {OX+94},{OY-54} Z" fill="url(#sw)" opacity=".5"><animateTransform attributeName="transform" type="rotate" from="0 {OX} {OY}" to="-360 {OX} {OY}" dur="6s" repeatCount="indefinite"/></path>
+    <circle cx="{OX}" cy="{OY}" r="44" fill="#120b2e" stroke="{t2}" stroke-width="2" filter="url(#ig)"><animate attributeName="r" values="42;47;42" dur="2.4s" repeatCount="indefinite"/></circle>
+    <text x="{OX}" y="{OY+16}" text-anchor="middle" font-size="42">{icon}<animateTransform attributeName="transform" type="translate" values="0 0;0 -4;0 0" dur="2.6s" repeatCount="indefinite"/></text>
+    {"".join(orbit)}
+    <!-- category -->
+    <g opacity="0"><animate attributeName="opacity" from="0" to="1" begin=".2s" dur=".6s" fill="freeze"/>
+      <rect x="{TX}" y="62" width="{cw:.0f}" height="24" rx="12" fill="{t2}" fill-opacity=".12" stroke="{t2}" stroke-opacity=".6"/>
+      <circle cx="{TX+15}" cy="74" r="3.5" fill="{t2}"><animate attributeName="opacity" values="1;.2;1" dur="1.2s" repeatCount="indefinite"/></circle>
+      <text x="{TX+26}" y="78.5" font-family="{MONO}" font-size="11.5" font-weight="700" letter-spacing="2" fill="{t2}">{escape(cat)}</text>
+    </g>
+    <!-- title -->
+    <g opacity="0"><animate attributeName="opacity" from="0" to="1" begin=".4s" dur=".8s" fill="freeze"/>
+      <animateTransform attributeName="transform" type="translate" from="-22 0" to="0 0" begin=".4s" dur=".8s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines=".2 .8 .2 1"/>
+      <text x="{TX}" y="{TY}" font-family="{SANS}" font-size="{fs:.0f}" font-weight="800" fill="url(#tg)" filter="url(#gl)">{escape(title)}</text>
+      <g clip-path="url(#nc)"><rect x="-200" y="{TY-70}" width="120" height="90" fill="url(#sh)" transform="skewX(-20)">
+        <animate attributeName="x" values="-200;760;760" keyTimes="0;.35;1" dur="5s" begin="1.6s" repeatCount="indefinite"/></rect></g>
+    </g>
+    <text x="{TX}" y="{TY+46}" font-family="{MONO}" font-size="19" font-weight="700" fill="{GREEN}">&gt;</text>
+    <text x="{TX+26}" y="{TY+46}" clip-path="url(#tc)" font-family="{MONO}" font-size="19" font-weight="600" fill="#d9d2ff">{escape(tag)}</text>
+    {cursor}
+    {"".join(chips)}
+    <text x="{TX}" y="{H-24}" font-family="{MONO}" font-size="10.5" letter-spacing="3" fill="{MUTED}">◆ AN AI PROJECT BY NEELIMA PASALA</text>
+    <text x="{W-24}" y="{H-24}" text-anchor="end" font-family="{MONO}" font-size="10.5" letter-spacing="2" fill="{MUTED}">github.com/Neelimapasala<animate attributeName="opacity" values="1;.4;1" dur="2s" repeatCount="indefinite"/></text>
+    <g stroke="{t2}" stroke-width="2" fill="none" opacity=".7"><path d="M16 42 V16 H42"/><path d="M{W-42} 16 H{W-16} V42"/><path d="M16 {H-42} V{H-16} H42"/><path d="M{W-42} {H-16} H{W-16} V{H-42}"/>
+      <animate attributeName="opacity" values=".35;.9;.35" dur="3s" repeatCount="indefinite"/></g>
+  </g>
+  <rect x="1" y="1" width="{W-2}" height="{H-2}" rx="19" fill="none" stroke="url(#tg)" stroke-width="2" opacity=".85"/>
+</svg>'''
+    write(f"banner-{slug}.svg", svg)
+
+
+def divider():
+    W, H = 1000, 26
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
+  <defs><linearGradient id="dg" x1="0" x2="1"><stop offset="0" stop-color="{PURPLE}" stop-opacity="0"/><stop offset=".5" stop-color="{CYAN}"/><stop offset="1" stop-color="{PURPLE}" stop-opacity="0"/></linearGradient>
+    <filter id="g" x="-50%" y="-300%" width="200%" height="700%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+  <line x1="0" y1="13" x2="{W}" y2="13" stroke="url(#dg)" stroke-width="2"/>
+  <ellipse cx="0" cy="13" rx="60" ry="2.5" fill="#fff" filter="url(#g)"><animate attributeName="cx" values="-80;{W+80}" dur="3.5s" repeatCount="indefinite"/></ellipse>
+  <path d="M{W/2},4 L{W/2+9},13 L{W/2},22 L{W/2-9},13 Z" fill="#0d1117" stroke="{CYAN}" stroke-width="2" filter="url(#g)">
+    <animateTransform attributeName="transform" type="rotate" from="0 {W/2} 13" to="360 {W/2} 13" dur="6s" repeatCount="indefinite"/></path>
+</svg>'''
+    write("divider.svg", svg)
+
+
+def repo_footer():
+    W, H = 1000, 110
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
+  <defs>
+    <clipPath id="fr"><rect width="{W}" height="{H}" rx="16"/></clipPath>
+    <filter id="bl" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="40"/></filter>
+    <filter id="gl" x="-10%" y="-50%" width="120%" height="200%"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <linearGradient id="tg" gradientUnits="userSpaceOnUse" x1="0" x2="600" y1="0" y2="0" spreadMethod="repeat">
+      <stop offset="0" stop-color="#c4b5fd"/><stop offset=".33" stop-color="{CYAN}"/><stop offset=".66" stop-color="#ff2bd6"/><stop offset="1" stop-color="#c4b5fd"/>
+      <animateTransform attributeName="gradientTransform" type="translate" from="0 0" to="600 0" dur="6s" repeatCount="indefinite"/></linearGradient>
+  </defs>
+  <g clip-path="url(#fr)">
+    <rect width="{W}" height="{H}" fill="#07051a"/>
+    <circle cx="300" cy="55" r="120" fill="{PURPLE}" opacity=".45" filter="url(#bl)"><animate attributeName="cx" values="250;750;250" dur="12s" repeatCount="indefinite"/></circle>
+    <text x="{W/2}" y="50" text-anchor="middle" font-family="{SANS}" font-size="24" font-weight="800" fill="url(#tg)" filter="url(#gl)">Crafted with 💜 by Neelima Pasala</text>
+    <text x="{W/2}" y="80" text-anchor="middle" font-family="{MONO}" font-size="12" letter-spacing="3" fill="{MUTED}">APPLIED AI ENGINEER · GENAI · AGENTIC AI · LLM APPS</text>
+    <rect x="0" y="0" width="{W}" height="1.5" fill="{CYAN}" opacity=".3"><animate attributeName="y" values="0;{H}" dur="3s" repeatCount="indefinite"/></rect>
+  </g>
+  <rect x="1" y="1" width="{W-2}" height="{H-2}" rx="15" fill="none" stroke="url(#tg)" stroke-width="1.5" opacity=".8"/>
+</svg>'''
+    write("repo-footer.svg", svg)
+
+
+
 if __name__ == "__main__":
     hero()
     assistant_scene()
@@ -906,5 +1066,9 @@ if __name__ == "__main__":
     for i, r in enumerate(REPOS + MORE_REPOS):
         repo_card(*r, i)
     projects_header()
+    for i, r in enumerate(REPOS + MORE_REPOS):
+        repo_banner(*r, i)
+    divider()
+    repo_footer()
     tictactoe()
     runner()
