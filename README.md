@@ -103,7 +103,9 @@
 
 ---
 
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" width="34" align="center"/> Featured Repositories
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/projects-header.svg" width="100%" alt="Featured AI projects"/>
+</p>
 
 <p align="center">
   <a href="https://github.com/Neelimapasala/DecisionTwin-AI-_Agentic-AI"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-decisiontwin.svg" width="49%" alt="DecisionTwin AI"/></a>
@@ -117,15 +119,15 @@
 </p>
 
 <details>
-<summary><b><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Open%20File%20Folder.png" width="20"/> More AI projects (click to expand)</b></summary>
+<summary><b>🧪 6 more AI projects: QueryMind · DocMind · Prompt Optimizer · Support Agent · Disaster AI · Sentiment (click to expand)</b></summary>
 <br/>
 <p align="center">
-  <a href="https://github.com/Neelimapasala/SQL-agent-chatbot"><img src="https://github-readme-stats.vercel.app/api/pin/?username=Neelimapasala&repo=SQL-agent-chatbot&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=a78bfa&icon_color=00d4ff" width="49%"/></a>
-  <a href="https://github.com/Neelimapasala/DOC-MIND"><img src="https://github-readme-stats.vercel.app/api/pin/?username=Neelimapasala&repo=DOC-MIND&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=a78bfa&icon_color=00d4ff" width="49%"/></a>
-  <a href="https://github.com/Neelimapasala/prompt-ai-optimizer"><img src="https://github-readme-stats.vercel.app/api/pin/?username=Neelimapasala&repo=prompt-ai-optimizer&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=a78bfa&icon_color=00d4ff" width="49%"/></a>
-  <a href="https://github.com/Neelimapasala/disaster-intelligent-system"><img src="https://github-readme-stats.vercel.app/api/pin/?username=Neelimapasala&repo=disaster-intelligent-system&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=a78bfa&icon_color=00d4ff" width="49%"/></a>
-  <a href="https://github.com/Neelimapasala/E-commerce-Support-Resolution-Agent"><img src="https://github-readme-stats.vercel.app/api/pin/?username=Neelimapasala&repo=E-commerce-Support-Resolution-Agent&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=a78bfa&icon_color=00d4ff" width="49%"/></a>
-  <a href="https://github.com/Neelimapasala/sentimental-analysis-on-twitter"><img src="https://github-readme-stats.vercel.app/api/pin/?username=Neelimapasala&repo=sentimental-analysis-on-twitter&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=a78bfa&icon_color=00d4ff" width="49%"/></a>
+  <a href="https://github.com/Neelimapasala/SQL-agent-chatbot"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-querymind.svg" width="49%" alt="QueryMind SQL Agent"/></a>
+  <a href="https://github.com/Neelimapasala/DOC-MIND"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-docmind.svg" width="49%" alt="DocMind AI"/></a>
+  <a href="https://github.com/Neelimapasala/prompt-ai-optimizer"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-promptopt.svg" width="49%" alt="Prompt AI Optimizer"/></a>
+  <a href="https://github.com/Neelimapasala/E-commerce-Support-Resolution-Agent"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-supportagent.svg" width="49%" alt="E-commerce Support Resolution Agent"/></a>
+  <a href="https://github.com/Neelimapasala/disaster-intelligent-system"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-disaster.svg" width="49%" alt="Disaster Intelligence System"/></a>
+  <a href="https://github.com/Neelimapasala/sentimental-analysis-on-twitter"><img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/repo-sentiment.svg" width="49%" alt="Twitter Sentiment Analysis"/></a>
 </p>
 </details>
 
