@@ -323,7 +323,172 @@ def pipeline():
     write("pipeline.svg", svg)
 
 
+# ------------------------------------------------------------------ HERO BANNER
+def hero():
+    import random
+    rnd = random.Random(7)
+    W, H = 1000, 380
+    PINK = "#ff2bd6"
+    NAME = "Pasala Neelima"
+    NX, NY = 64, 158
+
+    # aurora blobs
+    blobs = "".join(
+        f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="{c}" opacity="{o}" filter="url(#blur)">'
+        f'<animate attributeName="cx" values="{cx};{cx+dx};{cx}" dur="{d}s" repeatCount="indefinite"/>'
+        f'<animate attributeName="cy" values="{cy};{cy+dy};{cy}" dur="{d*1.3:.1f}s" repeatCount="indefinite"/></circle>'
+        for cx, cy, r, c, o, dx, dy, d in [(180, 90, 170, PURPLE, .55, 140, 40, 14), (820, 120, 170, CYAN, .35, -120, 60, 17),
+                                           (520, 330, 150, PINK, .28, 160, -50, 19), (980, 340, 120, PURPLE, .4, -80, -40, 15)])
+
+    # synthwave perspective grid
+    vx, vy = 500, 250
+    grid = "".join(f'<line x1="{vx}" y1="{vy}" x2="{x}" y2="{H}" />' for x in range(-700, 1701, 100))
+    hlines = "".join(
+        f'<line x1="0" x2="{W}" y1="{vy}" y2="{vy}"><animate attributeName="y1" values="{vy};{H}" dur="3s" begin="{-i*0.75}s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".6 0 1 1"/>'
+        f'<animate attributeName="y2" values="{vy};{H}" dur="3s" begin="{-i*0.75}s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".6 0 1 1"/></line>'
+        for i in range(4))
+
+    # particles
+    parts = []
+    for _ in range(46):
+        x, y = rnd.randint(10, W - 10), rnd.randint(10, H - 10)
+        r = rnd.choice([0.8, 1, 1.2, 1.6, 2])
+        d = rnd.uniform(5, 11)
+        c = rnd.choice(["#ffffff", CYAN, VIOLET])
+        parts.append(f'<circle cx="{x}" cy="{y}" r="{r}" fill="{c}">'
+                     f'<animate attributeName="cy" values="{y};{y-50}" dur="{d:.1f}s" begin="{-rnd.uniform(0, d):.1f}s" repeatCount="indefinite"/>'
+                     f'<animate attributeName="opacity" values="0;.9;0" dur="{d:.1f}s" begin="{-rnd.uniform(0, d):.1f}s" repeatCount="indefinite"/></circle>')
+
+    # roles typing carousel
+    roles = ["AI/ML Engineer", "Generative AI Builder", "LLM · RAG · AI Agents", "Computer Vision & NLP"]
+    SLOT, CYC = 3.4, 3.4 * len(roles)
+    RX, RY, CW = NX + 30, 214, 14.5
+    role_defs, role_txt = [], []
+    for i, ro in enumerate(roles):
+        w = len(ro) * CW + 4
+        s = i * SLOT
+        pts = [(0, 0)] + ([(s, 0)] if s > 0 else []) + [(s + 1.1, w), (s + 2.6, w), (s + 3.1, 0), (CYC, 0)]
+        kt = ";".join(f"{t/CYC:.4f}" for t, _ in pts)
+        vals = ";".join(f"{v:.0f}" for _, v in pts)
+        xs = ";".join(f"{RX + v:.0f}" for _, v in pts)
+        role_defs.append(f'<clipPath id="r{i}"><rect x="{RX}" y="{RY-26}" height="36" width="0">'
+                         f'<animate attributeName="width" values="{vals}" keyTimes="{kt}" dur="{CYC}s" repeatCount="indefinite"/></rect></clipPath>')
+        on = f"0;0;1;1;0;0" if s > 0 else "1;1;0;0"
+        okt = (f"0;{s/CYC:.4f};{(s+.01)/CYC:.4f};{(s+3.1)/CYC:.4f};{(s+3.11)/CYC:.4f};1" if s > 0
+               else f"0;{3.1/CYC:.4f};{3.11/CYC:.4f};1")
+        role_txt.append(
+            f'<text x="{RX}" y="{RY}" clip-path="url(#r{i})" font-family="{MONO}" font-size="24" font-weight="600" fill="url(#roleg)">{escape(ro)}</text>'
+            f'<rect y="{RY-22}" width="3" height="28" fill="{CYAN}" x="{RX}" opacity="0">'
+            f'<animate attributeName="x" values="{xs}" keyTimes="{kt}" dur="{CYC}s" repeatCount="indefinite"/>'
+            f'<animate attributeName="opacity" values="{on}" keyTimes="{okt}" dur="{CYC}s" repeatCount="indefinite"/></rect>')
+
+    # chips
+    chips_data = [("🎓", "M.Sc. Data Science · VIT", VIOLET), ("📍", "Chennai, India", CYAN), (None, "Open to AI/ML roles", GREEN)]
+    cx, chips = NX, []
+    for i, (e, t, c) in enumerate(chips_data):
+        w = len(t) * 7.3 + (44 if e or True else 26)
+        icon = (f'<text x="{cx+14}" y="{280}" font-size="14">{e}</text>' if e else
+                f'<circle cx="{cx+20}" cy="275" r="4.5" fill="{GREEN}"><animate attributeName="r" values="4;6;4" dur="1.4s" repeatCount="indefinite"/></circle>'
+                f'<circle cx="{cx+20}" cy="275" r="4" fill="none" stroke="{GREEN}"><animate attributeName="r" values="4;12" dur="1.4s" repeatCount="indefinite"/><animate attributeName="opacity" values=".9;0" dur="1.4s" repeatCount="indefinite"/></circle>')
+        chips.append(f'<g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="{1.0+i*0.2:.1f}s" dur=".6s" fill="freeze"/>'
+                     f'<animateTransform attributeName="transform" type="translate" from="0 10" to="0 0" begin="{1.0+i*0.2:.1f}s" dur=".6s" fill="freeze"/>'
+                     f'<rect x="{cx}" y="259" width="{w:.0f}" height="32" rx="16" fill="#0d0a1f" fill-opacity=".75" stroke="{c}" stroke-opacity=".6"/>'
+                     f'{icon}<text x="{cx+36}" y="280" font-family="{SANS}" font-size="13" font-weight="600" fill="{TEXT}">{escape(t)}</text></g>')
+        cx += w + 10
+
+    # holographic AI core with orbiting skills
+    OX, OY = 810, 178
+    orbit_items = [("LLMs", VIOLET, 112, 16, 0), ("RAG", CYAN, 112, 16, -4), ("Agents", GREEN, 112, 16, -8), ("Vision", PINK, 112, 16, -12),
+                   ("NLP", CYAN, 70, 11, 0), ("ML", VIOLET, 70, 11, -5.5)]
+    orbits = []
+    for label, c, r, d, beg in orbit_items:
+        path = f"M{OX-r},{OY} a{r},{r} 0 1,1 {2*r},0 a{r},{r} 0 1,1 {-2*r},0"
+        w = len(label) * 7.5 + 18
+        orbits.append(f'<g><animateMotion path="{path}" dur="{d}s" begin="{beg}s" repeatCount="indefinite"/>'
+                      f'<rect x="{-w/2}" y="-11" width="{w}" height="22" rx="11" fill="#0d0a1f" stroke="{c}" stroke-width="1.5"/>'
+                      f'<text x="0" y="4.5" text-anchor="middle" font-family="{MONO}" font-size="11" font-weight="700" fill="{c}">{label}</text></g>')
+    core = f'''
+  <g>
+    <circle cx="{OX}" cy="{OY}" r="150" fill="url(#coreGlow)"/>
+    <circle cx="{OX}" cy="{OY}" r="112" fill="none" stroke="{VIOLET}" stroke-opacity=".35" stroke-dasharray="2 8">
+      <animateTransform attributeName="transform" type="rotate" from="0 {OX} {OY}" to="360 {OX} {OY}" dur="40s" repeatCount="indefinite"/></circle>
+    <circle cx="{OX}" cy="{OY}" r="70" fill="none" stroke="{CYAN}" stroke-opacity=".35" stroke-dasharray="12 6">
+      <animateTransform attributeName="transform" type="rotate" from="360 {OX} {OY}" to="0 {OX} {OY}" dur="24s" repeatCount="indefinite"/></circle>
+    <circle cx="{OX}" cy="{OY}" r="92" fill="none" stroke="url(#arc)" stroke-width="3" stroke-dasharray="120 460" stroke-linecap="round">
+      <animateTransform attributeName="transform" type="rotate" from="0 {OX} {OY}" to="360 {OX} {OY}" dur="4s" repeatCount="indefinite"/></circle>
+    <path d="M{OX},{OY} L{OX+112},{OY} A112,112 0 0,0 {OX+97},{OY-56} Z" fill="url(#sweep)" opacity=".5">
+      <animateTransform attributeName="transform" type="rotate" from="0 {OX} {OY}" to="-360 {OX} {OY}" dur="6s" repeatCount="indefinite"/></path>
+    <circle cx="{OX}" cy="{OY}" r="40" fill="#120b2e" stroke="{CYAN}" stroke-width="2" filter="url(#glow)">
+      <animate attributeName="r" values="38;43;38" dur="2.4s" repeatCount="indefinite"/></circle>
+    <text x="{OX}" y="{OY+15}" text-anchor="middle" font-size="40">🧠</text>
+    {"".join(orbits)}
+  </g>'''
+
+    name_txt = f'x="{NX}" y="{NY}" font-family="{SANS}" font-size="66" font-weight="800" letter-spacing="-1"'
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
+  <defs>
+    <clipPath id="frame"><rect width="{W}" height="{H}" rx="22"/></clipPath>
+    <filter id="blur" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="55"/></filter>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="nameGlow" x="-10%" y="-40%" width="120%" height="180%"><feGaussianBlur stdDeviation="9" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <linearGradient id="nameg" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="600" y2="0" spreadMethod="repeat">
+      <stop offset="0" stop-color="#c4b5fd"/><stop offset=".33" stop-color="{CYAN}"/><stop offset=".66" stop-color="{PINK}"/><stop offset="1" stop-color="#c4b5fd"/>
+      <animateTransform attributeName="gradientTransform" type="translate" from="0 0" to="600 0" dur="6s" repeatCount="indefinite"/></linearGradient>
+    <linearGradient id="roleg" x1="0" x2="1"><stop offset="0" stop-color="{CYAN}"/><stop offset="1" stop-color="{VIOLET}"/></linearGradient>
+    <linearGradient id="arc" x1="0" x2="1"><stop offset="0" stop-color="{CYAN}" stop-opacity="0"/><stop offset="1" stop-color="{CYAN}"/></linearGradient>
+    <linearGradient id="sweep" x1="0" x2="1"><stop offset="0" stop-color="{CYAN}" stop-opacity=".0"/><stop offset="1" stop-color="{CYAN}" stop-opacity=".45"/></linearGradient>
+    <radialGradient id="coreGlow"><stop offset="0" stop-color="{PURPLE}" stop-opacity=".45"/><stop offset=".6" stop-color="{PURPLE}" stop-opacity=".08"/><stop offset="1" stop-color="{PURPLE}" stop-opacity="0"/></radialGradient>
+    <linearGradient id="gridfade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff" stop-opacity="1"/></linearGradient>
+    <mask id="gm"><rect x="0" y="{vy}" width="{W}" height="{H-vy}" fill="url(#gridfade)"/></mask>
+    <linearGradient id="shine" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <clipPath id="nameClip"><text {name_txt}>{NAME}</text></clipPath>
+    {"".join(role_defs)}
+  </defs>
+  <g clip-path="url(#frame)">
+    <rect width="{W}" height="{H}" fill="#07051a"/>
+    {blobs}
+    <g mask="url(#gm)" stroke="{PURPLE}" stroke-width="1.2" opacity=".55">{grid}{hlines}</g>
+    {"".join(parts)}
+    <!-- scan line -->
+    <rect x="0" y="0" width="{W}" height="2" fill="{CYAN}" opacity=".18"><animate attributeName="y" values="0;{H}" dur="5s" repeatCount="indefinite"/></rect>
+    {core}
+    <!-- intro label -->
+    <g opacity="0"><animate attributeName="opacity" from="0" to="1" begin=".2s" dur=".6s" fill="freeze"/>
+      <text x="{NX+2}" y="92" font-family="{MONO}" font-size="14" fill="{CYAN}" letter-spacing="4">&lt;HELLO_WORLD/&gt;  I'M</text>
+      <rect x="{NX+2}" y="100" width="46" height="2" fill="{CYAN}"><animate attributeName="width" values="46;150;46" dur="4s" repeatCount="indefinite"/></rect>
+    </g>
+    <!-- name with glow, glitch + shine -->
+    <g opacity="0"><animate attributeName="opacity" from="0" to="1" begin=".4s" dur=".8s" fill="freeze"/>
+      <animateTransform attributeName="transform" type="translate" from="-24 0" to="0 0" begin=".4s" dur=".8s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines=".2 .8 .2 1"/>
+      <text {name_txt} fill="{CYAN}" opacity="0">{NAME}
+        <animate attributeName="opacity" values="0;0;.75;0;.6;0;0" keyTimes="0;.6;.61;.63;.65;.66;1" dur="7s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate" values="0 0;-5 1;3 -1;-3 0;0 0" keyTimes="0;.61;.63;.65;1" dur="7s" repeatCount="indefinite"/></text>
+      <text {name_txt} fill="{PINK}" opacity="0">{NAME}
+        <animate attributeName="opacity" values="0;0;.75;0;.6;0;0" keyTimes="0;.6;.61;.63;.65;.66;1" dur="7s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate" values="0 0;5 -1;-3 1;3 0;0 0" keyTimes="0;.61;.63;.65;1" dur="7s" repeatCount="indefinite"/></text>
+      <text {name_txt} fill="url(#nameg)" filter="url(#nameGlow)">{NAME}</text>
+      <g clip-path="url(#nameClip)"><rect x="-200" y="80" width="120" height="100" fill="url(#shine)" transform="skewX(-20)">
+        <animate attributeName="x" values="-200;760;760" keyTimes="0;.35;1" dur="5s" begin="1.5s" repeatCount="indefinite"/></rect></g>
+    </g>
+    <!-- role typing -->
+    <text x="{NX+2}" y="{RY}" font-family="{MONO}" font-size="24" font-weight="700" fill="{GREEN}">&gt;</text>
+    {"".join(role_txt)}
+    {"".join(chips)}
+    <!-- HUD corners -->
+    <g stroke="{CYAN}" stroke-width="2" fill="none" opacity=".7">
+      <path d="M18 46 V18 H46"/><path d="M{W-46} 18 H{W-18} V46"/><path d="M18 {H-46} V{H-18} H46"/><path d="M{W-46} {H-18} H{W-18} V{H-46}"/>
+      <animate attributeName="opacity" values=".35;.9;.35" dur="3s" repeatCount="indefinite"/>
+    </g>
+    <text x="{W-26}" y="{H-26}" text-anchor="end" font-family="{MONO}" font-size="10" fill="{MUTED}" letter-spacing="2">SYS.STATUS: LEARNING ▮
+      <animate attributeName="opacity" values="1;.3;1" dur="1.6s" repeatCount="indefinite"/></text>
+  </g>
+  <rect x="1" y="1" width="{W-2}" height="{H-2}" rx="21" fill="none" stroke="url(#nameg)" stroke-width="2" opacity=".8"/>
+</svg>'''
+    write("hero.svg", svg)
+
+
 if __name__ == "__main__":
+    hero()
     about()
     pipeline()
     for i, r in enumerate(REPOS):
