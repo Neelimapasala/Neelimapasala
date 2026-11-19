@@ -30,31 +30,64 @@
   <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Bullseye.png" width="22"/> <b>Open to AI/ML & GenAI roles</b>
 </p>
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/pipeline.svg" width="100%" alt="AI workflow: Data, EDA, ML/DL, LLM + RAG, AI Agent, Deploy"/>
+</p>
+
 ---
 
 ## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Hammer%20and%20Wrench.png" width="34" align="center"/> Tech Stack
 
-<p align="center"><b>Languages & Databases</b></p>
+<p align="center"><b>🤖 Generative AI & LLMs</b></p>
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,r,java,mysql,mongodb&theme=dark" />
-</p>
-
-<p align="center"><b>AI · ML · Data</b></p>
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=tensorflow,pytorch,opencv,sklearn&theme=dark" />
-  <br/>
-  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white"/>
-  <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white"/>
+  <img src="https://img.shields.io/badge/LLMs-7f00ff?style=for-the-badge&logo=openai&logoColor=white"/>
+  <img src="https://img.shields.io/badge/RAG-5b2bb5?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/AI%20Agents-00a3cc?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Prompt%20Engineering-3b2a6b?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Vector%20DBs-0f766e?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white"/>
   <img src="https://img.shields.io/badge/Hugging%20Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black"/>
-  <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black"/>
-  <img src="https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white"/>
 </p>
 
-<p align="center"><b>Web · APIs · Tools</b></p>
+<p align="center"><b>🧠 Machine Learning & Deep Learning</b></p>
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=flask,fastapi,html,css,js,ts,git,github,vscode&theme=dark" />
+  <img src="https://skillicons.dev/icons?i=python,tensorflow,pytorch,sklearn&theme=dark" />
+  <br/>
+  <img src="https://img.shields.io/badge/XGBoost-189fdd?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/CNN%20%7C%20ANN-7f00ff?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Ensemble%20Learning-3b2a6b?style=for-the-badge"/>
+</p>
+
+<p align="center"><b>👁️ Computer Vision & 💬 NLP</b></p>
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=opencv&theme=dark" />
+  <br/>
+  <img src="https://img.shields.io/badge/Image%20Classification-00a3cc?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Object%20Detection-5b2bb5?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Sentiment%20Analysis-0f766e?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/NER%20%7C%20Topic%20Modeling-3b2a6b?style=for-the-badge"/>
+</p>
+
+<p align="center"><b>📊 Data Science & Visualization</b></p>
+<p align="center">
+  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white"/>
+  <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Matplotlib-11557c?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Seaborn-4c72b0?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black"/>
+  <img src="https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white"/>
+  <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"/>
+  <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white"/>
+</p>
+
+<p align="center"><b>🚀 MLOps, Deployment & Tools</b></p>
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=fastapi,flask,git,github,vscode&theme=dark" />
+  <br/>
+  <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Google%20Colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=black"/>
+  <img src="https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=black"/>
+  <img src="https://img.shields.io/badge/REST%20APIs-7f00ff?style=for-the-badge"/>
 </p>
 
 <details>
@@ -111,14 +144,14 @@
 
 ## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Robot.png" width="34" align="center"/> AI Arcade
 
-<p align="center"><i>Little AI agents playing games: on a game board, and on my contribution graph.</i></p>
+<p align="center"><i>Classic AI algorithms in action: game-tree search, reinforcement learning and path-finding agents.</i></p>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/game-tictactoe.svg" width="49%" alt="Tic-tac-toe against a minimax AI"/>
   <img src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/game-runner.svg" width="49%" alt="AI agent runner dodging bugs"/>
 </p>
 
-<p align="center"><b>👻 Pac-Man AI eating my contributions</b></p>
+<p align="center"><b>👻 Pac-Man AI agent clearing my contribution graph</b> <i>(path-finding · ghost-avoidance)</i></p>
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/pacman-contribution-graph-dark.svg">
@@ -127,40 +160,6 @@
   </picture>
 </p>
 
-<details>
-<summary><b>🕹️ More contribution games: Snake · Galaga · Breakout · Tetris (click to expand)</b></summary>
-<br/>
-
-<p align="center"><b>🐍 Snake</b></p>
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/github-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/github-snake.svg" />
-    <img alt="Snake eating contributions" src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/github-snake-dark.svg" />
-  </picture>
-</p>
-
-<p align="center"><b>🚀 Galaga</b></p>
-<p align="center">
-  <img alt="Galaga contribution graph" src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/galaga-contribution-graph.svg">
-</p>
-
-<p align="center"><b>🧱 Breakout</b></p>
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/breakout-contribution-graph-dark.svg">
-    <img alt="Breakout contribution graph" src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/breakout-contribution-graph.svg">
-  </picture>
-</p>
-
-<p align="center"><b>🟪 Tetris</b></p>
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/tetris-contribution-graph-dark.svg">
-    <img alt="Tetris contribution graph" src="https://raw.githubusercontent.com/Neelimapasala/Neelimapasala/output/tetris-contribution-graph.svg">
-  </picture>
-</p>
-</details>
 
 ---
 
