@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="110" viewBox="0 0 1000 110">
+  <defs>
+    <clipPath id="fr"><rect width="1000" height="110" rx="16"/></clipPath>
+    <filter id="bl" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="40"/></filter>
+    <filter id="gl" x="-10%" y="-50%" width="120%" height="200%"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <linearGradient id="tg" gradientUnits="userSpaceOnUse" x1="0" x2="600" y1="0" y2="0" spreadMethod="repeat">
+      <stop offset="0" stop-color="#c4b5fd"/><stop offset=".33" stop-color="#00d4ff"/><stop offset=".66" stop-color="#ff2bd6"/><stop offset="1" stop-color="#c4b5fd"/>
+      <animateTransform attributeName="gradientTransform" type="translate" from="0 0" to="600 0" dur="6s" repeatCount="indefinite"/></linearGradient>
+  </defs>
+  <g clip-path="url(#fr)">
+    <rect width="1000" height="110" fill="#07051a"/>
+    <circle cx="300" cy="55" r="120" fill="#7f00ff" opacity=".45" filter="url(#bl)"><animate attributeName="cx" values="250;750;250" dur="12s" repeatCount="indefinite"/></circle>
+    <text x="500.0" y="50" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="24" font-weight="800" fill="url(#tg)" filter="url(#gl)">Crafted with 💜 by Neelima Pasala</text>
+    <text x="500.0" y="80" text-anchor="middle" font-family="'Fira Code', 'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="12" letter-spacing="3" fill="#8b949e">APPLIED AI ENGINEER · GENAI · AGENTIC AI · LLM APPS</text>
+    <rect x="0" y="0" width="1000" height="1.5" fill="#00d4ff" opacity=".3"><animate attributeName="y" values="0;110" dur="3s" repeatCount="indefinite"/></rect>
+  </g>
+  <rect x="1" y="1" width="998" height="108" rx="15" fill="none" stroke="url(#tg)" stroke-width="1.5" opacity=".8"/>
+</svg>
